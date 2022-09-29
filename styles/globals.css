@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;  
+
+* { 
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', 'Charter' ,sans-serif;
+  }
+
+@layer components {
+
+  .header {
+    @apply w-full h-full drop-shadow-lg  bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500
+  }
+
+  .aboutHover {
+    @apply hover:cursor-default hover:blur-sm ease-in-out duration-700 
+  }
+
+
+}
