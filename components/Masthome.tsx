@@ -13,6 +13,7 @@ type Props = {
 // FRONTEND
 
 export default function Masthome({ designs }: Props) {
+  console.log("math", urlFor(designs[0].image).url());
   return (
     <div className="bg-r-mainblack h-screen w-screen">
       <div className="h-full w-full flex flex-col items-center justify-center">
@@ -68,7 +69,8 @@ export default function Masthome({ designs }: Props) {
             console.log(design.image.asset),
             (
               <div key={design._id}>
-                <img src={design.image.asset._ref} />
+                {/* <img src={design.image.asset._ref} /> */}
+                <img src={urlFor(design.image).url()} />
               </div>
             )
           )

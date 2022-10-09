@@ -6,9 +6,10 @@ export const fetchDesigns = async() => {
 
     
     console.log(res);
+    console.log(process.env.NEXT_PUBLIC_BASE_URL);
 
     const data = await res.json()
-    const designs: Design = data.designs;
+    const designs: Design[] = data.designs;
 
     // console.log(designs);
 
