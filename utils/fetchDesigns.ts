@@ -1,4 +1,4 @@
-import { Design } from "../../typings";
+import { Design } from "../typings";
 
 export const fetchDesigns = async() => {
     // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getDesigns`).then(res => console.log('async',res)).catch((err)=> console.log(err));

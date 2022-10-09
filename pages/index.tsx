@@ -1,12 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
 import { Post, Social, PageInfo, Design } from "../typings";
 import { GetStaticProps, NextPage } from "next";
-import { fetchSocials } from "../src/utils/fetchSocials";
-import { fetchDesigns } from "../src/utils/fetchDesigns";
-import { fetchPageInfos } from "../src/utils/fetchPageInfos";
-import { fetchPosts } from "../src/utils/fetchPosts";
+import { fetchSocials } from "../utils/fetchSocials";
+import { fetchDesigns } from "../utils/fetchDesigns";
+import { fetchPageInfos } from "../utils/fetchPageInfos";
+import { fetchPosts } from "../utils/fetchPosts";
 import {
   About,
   BeforeAfter,
@@ -14,16 +14,16 @@ import {
   Header,
   Masthome,
   ImagesSection,
-} from "../src/components";
+} from "../components";
 
 // BACKEND
 
-type Props = {
+interface Props {
   socials: Social[];
   designs: Design[];
   pageInfos: PageInfo[];
   posts: Post[];
-};
+}
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const socials: Social[] = await fetchSocials();
@@ -47,8 +47,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 // FRONTEND
 
-const Home = ({ socials, designs, pageInfos, posts }: Props) => {
-  console.log("home", designs);
+const Home: FC<Props> = ({ socials, designs, pageInfos, posts }: Props) => {
   return (
     <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Head>

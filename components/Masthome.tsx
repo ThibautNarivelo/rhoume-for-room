@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Design } from "../../typings";
-import { urlFor } from "../../sanity";
+import { Design } from "../typings";
+import { urlFor } from "../sanity";
 
 // BACKEND
 
@@ -14,6 +14,7 @@ interface MastHomeProps {
 
 export const Masthome: FC<MastHomeProps> = ({ designs }) => {
   console.log("math", urlFor(designs[0].image).url());
+
   return (
     <div className="bg-r-mainblack h-screen w-screen">
       <div className="h-full w-full flex flex-col items-center justify-center">
@@ -63,7 +64,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
         {/* {designs. && (
           <img alt={designs.title} src={urlFor(designs?.image).url()} />
         )} */}
-        {designs?.map(
+        {designs.map(
           (design) => (
             // <p>{design.}</p>
             console.log(design.image.asset),

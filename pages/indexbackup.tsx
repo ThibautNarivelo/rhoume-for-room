@@ -1,11 +1,11 @@
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
-import Header from "../src/components/header";
-import Masthome from "../src/components/Masthome";
-import About from "../src/components/about";
-import ImagesSection from "../src/components/images-section";
-import BeforeAfter from "../src/components/before-after";
-import Footer from "../src/components/footer";
+import Header from "../components/header";
+import Masthome from "../components/Masthome";
+import About from "../components/about";
+import ImagesSection from "../components/images-section";
+import BeforeAfter from "../components/before-after";
+import Footer from "../components/footer";
 import React, { useRef } from "react";
 import { Post, Social, PageInfo, Design } from "../typings";
 

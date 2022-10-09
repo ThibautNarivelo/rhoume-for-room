@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Social } from "../../typings";
+import { Social } from "../typings";
 
 // BACKEND
 
