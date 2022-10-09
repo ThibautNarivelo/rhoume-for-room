@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
 
-export default function footer() {
+export const Footer: FC = () => {
   return (
     <motion.div
       initial={{
@@ -29,4 +29,6 @@ export default function footer() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default null;

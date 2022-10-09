@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-export default function beforeafterCard() {
+export const BeforeafterCard: FC = () => {
   return (
     <div className="cursor-default">
       <h3 className="w-screen h-auto flex justify-end mt-10 tracking-[5vw] p-5 uppercase text-r-mainblack text-2xl md:mt-20 md:p-10 xl:p-20 hover:blur-sm ease-in-out duration-700">
@@ -73,4 +73,6 @@ export default function beforeafterCard() {
       </article>
     </div>
   );
-}
+};
+
+export default null;

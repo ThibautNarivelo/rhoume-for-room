@@ -1,18 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { Design } from "../typings";
 import Image from "next/image";
-import { urlFor } from "../sanity";
+import { Design } from "../../typings";
+import { urlFor } from "../../sanity";
 
 // BACKEND
 
-type Props = {
+interface MastHomeProps {
   designs: Design[];
-};
+}
 
 // FRONTEND
 
-export default function Masthome({ designs }: Props) {
+export const Masthome: FC<MastHomeProps> = ({ designs }) => {
   console.log("math", urlFor(designs[0].image).url());
   return (
     <div className="bg-r-mainblack h-screen w-screen">
@@ -70,7 +70,7 @@ export default function Masthome({ designs }: Props) {
             (
               <div key={design._id}>
                 {/* <img src={design.image.asset._ref} /> */}
-                <img src={urlFor(design.image).url()} />
+                <img src={urlFor(design?.image).url()} />
               </div>
             )
           )
@@ -95,4 +95,4 @@ export default function Masthome({ designs }: Props) {
       </div>
     </div>
   );
-}
+};

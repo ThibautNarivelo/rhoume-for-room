@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { PageInfo } from "../typings";
+import { PageInfo } from "../../typings";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
 
 // BACKEND
@@ -11,7 +11,7 @@ type Props = {
 
 // FRONTEND
 
-export default function About() {
+export const About: FC = () => {
   return (
     <div className="h-screen w-screen bg-r-mainwhite text-r-mainblack flex items-center justify-center text-center">
       <div className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
@@ -77,4 +77,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default null;

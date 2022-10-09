@@ -1,8 +1,8 @@
-import React, { Fragment, SetStateAction, useState } from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
-import BeforeafterCard from "./beforeafterCard";
+import { BeforeafterCard } from "./beforeafterCard";
 
-export default function beforeAfter() {
+export const BeforeAfter: FC = () => {
   return (
     <div className="h-screen w-screen bg-r-mainwhite">
       <motion.div
@@ -80,4 +80,6 @@ export default function beforeAfter() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default null;

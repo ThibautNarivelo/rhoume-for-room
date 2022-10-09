@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-
 import { motion } from "framer-motion";
 
-export default function ImagesSection() {
+export const ImagesSection = () => {
   return (
     <div className="h-screen w-screen bg-r-mainblack">
       <motion.div
@@ -30,4 +29,6 @@ export default function ImagesSection() {
       </motion.div>
     </div>
   );
-}
+};
+
+export default null;

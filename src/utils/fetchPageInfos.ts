@@ -1,4 +1,4 @@
-import { PageInfo } from "../typings";
+import { PageInfo } from "../../typings";
 
 export const fetchPageInfos = async() => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPageInfos`);

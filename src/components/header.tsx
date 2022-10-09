@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { Social } from "../typings";
 import Link from "next/link";
+import { Social } from "../../typings";
 
 // BACKEND
 
@@ -11,7 +11,7 @@ type Props = {
 
 // FRONTEND
 
-export default function Header({ socials }: Props) {
+export const Header: FC<Props> = ({ socials }) => {
   return (
     <div>
       <div className="bg-r-mainblack text-r-mainwhite fixed h-[.2vw] w-screen top-0 left-0 right-0 ease-in-out duration-500 z-20">
@@ -52,4 +52,6 @@ export default function Header({ socials }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default null;

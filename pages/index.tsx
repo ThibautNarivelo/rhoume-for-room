@@ -1,18 +1,20 @@
+import React from "react";
 import { sanityClient, urlFor } from "../sanity";
 import Head from "next/head";
-import Header from "../components/header";
-import Masthome from "../components/Masthome";
-import About from "../components/about";
-import ImagesSection from "../components/images-section";
-import BeforeAfter from "../components/before-after";
-import Footer from "../components/footer";
-import React, { useRef } from "react";
 import { Post, Social, PageInfo, Design } from "../typings";
 import { GetStaticProps, NextPage } from "next";
-import { fetchSocials } from "../utils/fetchSocials";
-import { fetchDesigns } from "../utils/fetchDesigns";
-import { fetchPageInfos } from "../utils/fetchPageInfos";
-import { fetchPosts } from "../utils/fetchPosts";
+import { fetchSocials } from "../src/utils/fetchSocials";
+import { fetchDesigns } from "../src/utils/fetchDesigns";
+import { fetchPageInfos } from "../src/utils/fetchPageInfos";
+import { fetchPosts } from "../src/utils/fetchPosts";
+import {
+  About,
+  BeforeAfter,
+  Footer,
+  Header,
+  Masthome,
+  ImagesSection,
+} from "../src/components";
 
 // BACKEND
 
