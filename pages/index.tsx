@@ -3,17 +3,50 @@ import Head from "next/head";
 import Header from "../components/header";
 import Masthome from "../components/Masthome";
 import About from "../components/about";
-import { ImagesSection } from "../components";
-import { Post } from "../typings";
+import ImagesSection from "../components/images-section";
 import BeforeAfter from "../components/before-after";
 import Footer from "../components/footer";
 import React, { useRef } from "react";
+import { Post, Social, PageInfo, Design } from "../typings";
+import { GetStaticProps, NextPage } from "next";
+import { fetchSocials } from "../utils/fetchSocials";
+import { fetchDesigns } from "../utils/fetchDesigns";
+import { fetchPageInfos } from "../utils/fetchPageInfos";
+import { fetchPosts } from "../utils/fetchPosts";
 
-interface Props {
-  posts: [Post];
-}
+// BACKEND
 
-export default function Home({ posts }: Props) {
+type Props = {
+  socials: Social[];
+  designs: Design[];
+  pageInfos: PageInfo[];
+  posts: Post[];
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const socials: Social[] = await fetchSocials();
+  const designs: Design[] = await fetchDesigns();
+  const pageInfos: PageInfo[] = await fetchPageInfos();
+  const posts: Post[] = await fetchPosts();
+
+  return {
+    props: {
+      socials,
+      designs,
+      pageInfos,
+      posts,
+    },
+    // Next.js will attempt to re-generate the page:
+    // When a request comes in
+    // At most once every 5 seconds
+    revalidate: 5,
+  };
+};
+
+// FRONTEND
+
+const Home = ({ socials, designs, pageInfos, posts }: Props) => {
+  console.log("home", designs);
   return (
     <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0">
       <Head>
@@ -21,58 +54,35 @@ export default function Home({ posts }: Props) {
         <link rel="icon" href="favicon.ico" />
       </Head>
 
-      <Header />
+      {/* HEADER SECTION */}
+      <Header socials={socials} />
 
+      {/* HOME SECTION */}
       <section id="home" className="snap-start">
-        <Masthome />
+        <Masthome designs={designs} />
       </section>
 
+      {/* ABOUT SECTION */}
       <section id="about" className="snap-center">
         <About />
       </section>
 
+      {/* IMAGE SECTION */}
       <section id="images-section" className="snap-center">
-        <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center snap-mandatory">
-          <div className="rounded-lg carousel h-auto w-[75vw] md:w-[90vw] lg:w-[90vw] xl:w-[90vw] 2xl:w-[90vw] mx-10">
-            {posts.map((post, idx) => {
-              return <ImagesSection post={post} key={idx} />;
-            })}
-          </div>
-        </div>
+        <ImagesSection />
       </section>
 
+      {/* INFORMATION SECTION */}
       <section id="before-after" className="snap-center">
         <BeforeAfter />
       </section>
 
+      {/* FOOTER SECTION */}
       <section id="footer" className="snap-center">
         <Footer />
       </section>
     </div>
   );
-}
-
-// DON'T TOUCH!
-
-// This will change the Home route to a server side rended page route
-export const getServerSideProps = async () => {
-  const query = `*[_type == "post"] {
-    _id,
-    title,
-    author -> {
-    name,
-    image
-  },
-    description,
-    mainImage,
-    slug,
-  }`;
-
-  const posts = await sanityClient.fetch(query);
-
-  return {
-    props: {
-      posts,
-    },
-  };
 };
+
+export default Home;

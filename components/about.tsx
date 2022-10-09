@@ -1,5 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { fetchPageInfos } from "../utils/fetchPageInfos";
+
+// BACKEND
+
+type Props = {
+  pageInfos: PageInfo[];
+};
+
+// FRONTEND
 
 export default function About() {
   return (

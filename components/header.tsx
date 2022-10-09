@@ -1,7 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Social } from "../typings";
+import Link from "next/link";
 
-function Header() {
+// BACKEND
+
+type Props = {
+  socials: Social[];
+};
+
+// FRONTEND
+
+export default function Header({ socials }: Props) {
   return (
     <div>
       <div className="bg-r-mainblack text-r-mainwhite fixed h-[.2vw] w-screen top-0 left-0 right-0 ease-in-out duration-500 z-20">
@@ -32,13 +42,14 @@ function Header() {
           <a className="header" href="#before-after">
             + faq
           </a>
-          <a className="header" href="https://www.instagram.com/_rhoume">
-            + ig
-          </a>
+
+          {socials?.map((social) => (
+            <Link key={social._id} href={social.url}>
+              <a className="header">+ ig</a>
+            </Link>
+          ))}
         </motion.div>
       </div>
     </div>
   );
 }
-
-export default Header;

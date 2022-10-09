@@ -8,11 +8,21 @@ export default {
             title: 'Title',
             type: 'string',
           },
+          {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            description: 'Just click to Generate Button 👁',
+            options: {
+              source: 'title',
+              maxLength: 96,
+            },
+          },
         {
-            name: 'body',
+            name: 'text',
             title: 'Text',
             description: 'Text',
-            type: 'blockContent',
+            type: 'text',
           },
     ]
 }

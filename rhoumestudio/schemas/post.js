@@ -10,11 +10,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'size',
-      title: 'Size',
-      type: 'string',
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -26,8 +21,8 @@ export default {
     },
 
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       description: 'Good quality please! 🤓',
       options: {
@@ -35,15 +30,15 @@ export default {
       },
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
+      name: 'date',
+      title: 'Date of the tattoo',
       type: 'datetime',
     },
     {
       name: 'body',
       title: 'Body',
       description: 'Description of your tattoo 🐙',
-      type: 'blockContent',
+      type: 'text',
     },
   ],
 

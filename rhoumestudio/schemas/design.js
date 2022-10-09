@@ -10,17 +10,23 @@ export default {
         type: 'string',
       },
 
+      {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        description: 'Just click to Generate Button 👁',
+        options: {
+          source: 'title',
+          maxLength: 96,
+        },
+      },
   
       {
         name: 'image',
-        title: 'Image',
+        title: 'Design Image',
         type: 'image',
         description: 'Good quality please! 🤓',
-        options: {
-          hotspot: true,
-        },
       },
-
 
     ],
   
