@@ -9,7 +9,7 @@ type Props = {
 
 export const Faq: FC<Props> = ({ pageInfos }) => {
   return (
-    <div className="h-screen  bg-r-mainwhite flex relative overflow-y-scroll flex-col mx-auto items-center">
+    <div className="h-screen bg-r-mainwhite flex relative overflow-y-scroll flex-col mx-auto items-center">
       <motion.div
         initial={{
           y: 300,
@@ -34,12 +34,6 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
           }}
           className="w-screen flex space-x-5 flex-shrink-0 overflow-x-scroll snap-x snap-mandatory"
         >
-          {/* <FaqCard />
-          <FaqCard />
-          <FaqCard /> */}
-          {/* <h4>{pageInfo.title}</h4>
-            <article>{pageInfo.text}</article> */}
-          {/* <FaqCard key={pageInfo._id} pageInfo={pageInfo} /> */}
           {pageInfos?.map((pageInfo) => (
             <FaqCard key={pageInfo._id} pageInfo={pageInfo} />
           ))}

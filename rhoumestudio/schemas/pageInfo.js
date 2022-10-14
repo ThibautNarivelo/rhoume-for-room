@@ -23,12 +23,7 @@ export default {
             name: 'orderId',
             type: 'number',
           },
-        {
-            name: 'text',
-            title: 'Text',
-            description: 'Text',
-            type: 'text',
-          },
+  
           {
             name: 'body',
             title: 'Body',

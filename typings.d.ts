@@ -37,7 +37,6 @@ export interface PageInfo extends SanityBody {
         _type: string;
         current: string;
     };
-    text: string;
     title: string;
     body:[PortableTextBlock];
 }
