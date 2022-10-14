@@ -9,7 +9,7 @@ import { fetchPageInfos } from "../utils/fetchPageInfos";
 import { fetchPosts } from "../utils/fetchPosts";
 import {
   About,
-  BeforeAfter,
+  Faq,
   Footer,
   Header,
   Masthome,
@@ -70,12 +70,12 @@ const Home: FC<Props> = ({ socials, designs, pageInfos, posts }: Props) => {
 
       {/* IMAGE SECTION */}
       <section id="images-section" className="snap-center">
-        <ImagesSection />
+        <ImagesSection posts={posts} />
       </section>
 
       {/* INFORMATION SECTION */}
       <section id="before-after" className="snap-center">
-        <BeforeAfter />
+        <Faq />
       </section>
 
       {/* FOOTER SECTION */}

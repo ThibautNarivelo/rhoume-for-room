@@ -1,9 +1,9 @@
 export * from './Masthome';
-export * from './about';
-export * from './before-after';
-export * from './beforeafterCard';
+export * from './About';
+export * from './Faq';
+export * from './FaqCard';
 export * from './footer';
-export * from './header';
-export * from './images-section';
+export * from './Header';
+export * from './ImageSection';
 
 export default null;

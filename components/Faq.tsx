@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
-import { BeforeafterCard } from "./beforeafterCard";
+import { FaqCard } from "./FaqCard";
 
-export const BeforeAfter: FC = () => {
+export const Faq: FC = () => {
   return (
     <div className="h-screen w-screen bg-r-mainwhite">
       <motion.div
@@ -30,7 +30,7 @@ export const BeforeAfter: FC = () => {
             duration: 2,
           }}
         >
-          <BeforeafterCard />
+          <FaqCard />
         </motion.div>
 
         {/* AFTER CARE */}
@@ -45,7 +45,7 @@ export const BeforeAfter: FC = () => {
             duration: 2,
           }}
         >
-          <BeforeafterCard />
+          <FaqCard />
         </motion.div>
 
         {/* BOOKINGS */}
@@ -60,7 +60,7 @@ export const BeforeAfter: FC = () => {
             duration: 2,
           }}
         >
-          <BeforeafterCard />
+          <FaqCard />
         </motion.div>
 
         {/* APPOINTMENTS */}
@@ -75,7 +75,7 @@ export const BeforeAfter: FC = () => {
             duration: 2,
           }}
         >
-          <BeforeafterCard />
+          <FaqCard />
         </motion.div>
       </motion.div>
     </div>
