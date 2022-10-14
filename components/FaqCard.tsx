@@ -1,14 +1,29 @@
 import React, { FC } from "react";
+import { PageInfo } from "../typings";
+import PortableText from "react-portable-text";
+import { fetchPageInfos } from "../utils";
+import classNames from "classnames";
 
-export const FaqCard: FC = () => {
+type Props = {
+  pageInfo: PageInfo;
+};
+
+export const FaqCard: FC<Props> = ({ pageInfo }) => {
   return (
-    <div className="cursor-default">
+    // console.log(pageInfo.body),
+    <div className="h-screen flex flex-col items-center snap-center cursor-default">
       <h3 className="w-screen h-auto flex justify-end mt-10 tracking-[5vw] p-5 uppercase text-r-mainblack text-2xl md:mt-20 md:p-10 xl:p-20 hover:blur-sm ease-in-out duration-700">
-        bookings
+        {pageInfo.title}
       </h3>
-
-      <article className=" text-r-mainblack flex flex-row gap-5 items-center space-x-7 flex-shrink-0 p-5 snap-center text-sm md:leading-5 md:px-8 lg:leading-6 lg:px-10 xl:text-md xl:leading-6 xl:px-20 2xl:px-20">
-        The deposit is non-refundable. A minimum 50€ deposit is required in
+      <article className=" text-r-mainblack gap-5 items-center space-x-7 flex-shrink-0 p-2 text-sm md:leading-5 md:px-8 lg:leading-6 lg:px-10 xl:text-md xl:leading-6 xl:px-20 2xl:px-20">
+        {/* <PortableText value={[pageInfo.body]} /> */}
+        <PortableText
+          dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+          projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+          content={pageInfo.body}
+        />
+        {/* {pageInfo.text} */}
+        {/* The deposit is non-refundable. A minimum 50€ deposit is required in
         advance to book a tattoo appointment.
         <br />
         A deposit is required for each tattoo, even if you are coming to get
@@ -69,7 +84,7 @@ export const FaqCard: FC = () => {
         There is always time on the day to discuss your design and ask for small
         changes. There is always time on the day to discuss your design and ask
         for small changes. There is always time on the day to discuss your
-        design and ask for small changes.
+        design and ask for small changes. */}
       </article>
     </div>
   );

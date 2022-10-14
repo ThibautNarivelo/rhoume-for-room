@@ -18,11 +18,30 @@ export default {
               maxLength: 96,
             },
           },
+          {
+            title: 'ID for Order',
+            name: 'orderId',
+            type: 'number',
+          },
         {
             name: 'text',
             title: 'Text',
             description: 'Text',
             type: 'text',
           },
-    ]
+          {
+            name: 'body',
+            title: 'Body',
+            type: 'blockContent',
+          },
+    ],
+    orderings: [
+      {
+        title: 'ID for Order',
+        name: 'orderIdAsc',
+        by: [
+          {field: 'orderId', direction: 'asc'}
+        ]
+      },
+    ],
 }

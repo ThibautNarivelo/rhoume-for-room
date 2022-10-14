@@ -12,8 +12,9 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center place-items-center">
       <div className="rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[90vw] xl:w-[90vw] carousel mx-10">
-        {posts?.map((post, idx) => (
+        {posts?.map((post) => (
           <motion.div
+            key={post._id}
             initial={{
               opacity: 0,
             }}

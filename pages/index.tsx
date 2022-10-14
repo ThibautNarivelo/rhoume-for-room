@@ -74,8 +74,8 @@ const Home: FC<Props> = ({ socials, designs, pageInfos, posts }: Props) => {
       </section>
 
       {/* INFORMATION SECTION */}
-      <section id="before-after" className="snap-center">
-        <Faq />
+      <section id="faq" className="snap-center">
+        <Faq pageInfos={pageInfos} />
       </section>
 
       {/* FOOTER SECTION */}

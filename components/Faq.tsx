@@ -1,10 +1,15 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { FaqCard } from "./FaqCard";
+import { PageInfo } from "../typings";
 
-export const Faq: FC = () => {
+type Props = {
+  pageInfos: PageInfo[];
+};
+
+export const Faq: FC<Props> = ({ pageInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainwhite">
+    <div className="h-screen  bg-r-mainwhite flex relative overflow-y-scroll flex-col mx-auto items-center">
       <motion.div
         initial={{
           y: 300,
@@ -16,9 +21,7 @@ export const Faq: FC = () => {
           duration: 1,
         }}
         viewport={{ once: true }}
-        className="h-full flex relative space-x-5 overflow-x-scroll snap-x snap-mandatory"
       >
-        {/* BEFORE CARE */}
         <motion.div
           initial={{
             opacity: 0,
@@ -29,53 +32,17 @@ export const Faq: FC = () => {
           transition={{
             duration: 2,
           }}
+          className="w-screen flex space-x-5 flex-shrink-0 overflow-x-scroll snap-x snap-mandatory"
         >
+          {/* <FaqCard />
           <FaqCard />
-        </motion.div>
-
-        {/* AFTER CARE */}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-          }}
-        >
-          <FaqCard />
-        </motion.div>
-
-        {/* BOOKINGS */}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-          }}
-        >
-          <FaqCard />
-        </motion.div>
-
-        {/* APPOINTMENTS */}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 2,
-          }}
-        >
-          <FaqCard />
+          <FaqCard /> */}
+          {/* <h4>{pageInfo.title}</h4>
+            <article>{pageInfo.text}</article> */}
+          {/* <FaqCard key={pageInfo._id} pageInfo={pageInfo} /> */}
+          {pageInfos?.map((pageInfo) => (
+            <FaqCard key={pageInfo._id} pageInfo={pageInfo} />
+          ))}
         </motion.div>
       </motion.div>
     </div>

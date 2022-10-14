@@ -1,4 +1,5 @@
 // This is all I want to export from Sanity using Groq.
+import type { PortableTextBlock } from '@portabletext/types'
 interface SanityBody {
     _createdAt: string;
     _id: string;
@@ -38,6 +39,7 @@ export interface PageInfo extends SanityBody {
     };
     text: string;
     title: string;
+    body:[PortableTextBlock];
 }
 
 export interface Post extends SanityBody {

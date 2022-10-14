@@ -13,9 +13,6 @@ interface MastHomeProps {
 // FRONTEND
 
 export const Masthome: FC<MastHomeProps> = ({ designs }) => {
-  // console.log("math", urlFor(designs[0].image).url());
-  console.log(designs);
-
   return (
     <div className="bg-r-mainblack h-screen w-screen">
       {designs.map((design) => (
@@ -69,7 +66,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 0.5,
             }}
             viewport={{ once: true }}
-            className="w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[40vw] hover:2xl:w-[45vw] hover:xl:w-[45vw]  ease-in-out duration-700"
+            className="w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[35vw] hover:2xl:w-[40vw] hover:xl:w-[45vw]  ease-in-out duration-700"
           >
             <img src={urlFor(design.image).url()} />
             {/* <Image
