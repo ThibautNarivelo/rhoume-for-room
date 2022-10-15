@@ -3,13 +3,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../typings";
 
-// BACKEND
-
 type Props = {
   socials: Social[];
 };
-
-// FRONTEND
 
 export const Header: FC<Props> = ({ socials }) => {
   return (

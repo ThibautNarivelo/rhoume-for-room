@@ -40,6 +40,16 @@ export interface PageInfo extends SanityBody {
     title: string;
     body:[PortableTextBlock];
 }
+export interface AboutInfo extends SanityBody {
+    _type: "aboutInfo";
+    slug: {
+        _type: string;
+        current: string;
+    };
+    title: string;
+    definition:[PortableTextBlock];
+    bio:[PortableTextBlock];
+}
 
 export interface Post extends SanityBody {
     _type: "post";

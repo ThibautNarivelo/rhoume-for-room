@@ -10,6 +10,7 @@ import post from './post'
 import social from './social'
 import pageInfo from './pageInfo'
 import design from './design'
+import aboutInfo from './aboutInfo'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     social,
     pageInfo,
     design,
+    aboutInfo,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

@@ -1,16 +1,11 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Design } from "../typings";
 import { urlFor } from "../sanity";
-
-// BACKEND
 
 interface MastHomeProps {
   designs: Design[];
 }
-
-// FRONTEND
 
 export const Masthome: FC<MastHomeProps> = ({ designs }) => {
   return (
@@ -20,7 +15,6 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
           key={design._id}
           className="h-full w-full flex flex-col items-center justify-center"
         >
-          {/* RHOUME */}
           <motion.div
             initial={{
               opacity: 0,
@@ -37,7 +31,6 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             <img src="./rhoume.png" alt="rhoume logo" />
           </motion.div>
 
-          {/* FOR__ROOM */}
           <motion.div
             initial={{
               opacity: 0,
@@ -54,7 +47,6 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             <img src="./for ___ room.png" alt="for_room" />
           </motion.div>
 
-          {/* RHOUME DESIGN */}
           <motion.div
             initial={{
               opacity: 0,
@@ -69,15 +61,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             className="w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[35vw] hover:2xl:w-[40vw] hover:xl:w-[45vw]  ease-in-out duration-700"
           >
             <img src={urlFor(design.image).url()} />
-            {/* <Image
-                src={urlFor(design?.image).url()}
-                width={size}
-                height={size}
-                layout="fill"
-              /> */}
           </motion.div>
 
-          {/* CONTACT ME BUTTON */}
           <motion.div
             initial={{
               y: 500,
