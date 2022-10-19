@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", "Charter", sans-serif;
+}
+
+@layer components {
+  .header {
+    @apply w-full h-full drop-shadow-lg  bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+  }
+
+  .aboutHover {
+    @apply hover:cursor-default hover:blur-sm ease-in-out duration-700;
+  }
+
+  .faqContainer {
+    @apply w-screen h-screen p-5 flex flex-col justify-start items-end pt-16 overflow-auto;
+  }
+
+  .faqTitle {
+    @apply  uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw];
+  }
+
+  .faqBody {
+    @apply  m-auto text-sm w-auto h-auto p-20 md:px-[12vw] md:text-base;
+  }
+}

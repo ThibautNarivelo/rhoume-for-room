@@ -18,15 +18,52 @@ export default {
               maxLength: 96,
             },
           },
+
           {
-            title: 'ID for Order',
-            name: 'orderId',
-            type: 'number',
+            name: 'beforeCareTitle',
+            title: 'Before Care Title',
+            type: 'string',
           },
-  
+
           {
-            name: 'body',
-            title: 'Body',
+            name: 'beforeCareBody',
+            title: 'Before Care Body',
+            type: 'blockContent',
+          },
+
+          {
+            name: 'afterCareTitle',
+            title: 'After Care Title',
+            type: 'string',
+          },
+
+          {
+            name: 'afterCareBody',
+            title: 'After Care Body',
+            type: 'blockContent',
+          },
+
+          {
+            name: 'bookingsTitle',
+            title: 'Bookings Title',
+            type: 'string',
+          },
+
+          {
+            name: 'bookingsBody',
+            title: 'Bookings Body',
+            type: 'blockContent',
+          },
+
+          {
+            name: 'appointmentsTitle',
+            title: 'Appointments Title',
+            type: 'string',
+          },
+
+          {
+            name: 'appointmentsBody',
+            title: 'Appointments Body',
             type: 'blockContent',
           },
     ],

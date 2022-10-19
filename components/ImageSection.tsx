@@ -22,14 +22,14 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
               opacity: 1,
             }}
             transition={{
-              duration: 0.5,
+              duration: 1,
             }}
             viewport={{ once: true }}
             className="carousel carousel-item cursor-pointer"
           >
             <Link href={`/post/${post.slug?.current}`}>
               <img
-                className="rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-60 hover:opacity-100 snap-center ease-in-out duration-300"
+                className="rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300"
                 src={urlFor(post.image).url()!}
                 alt="rhoume's pictures"
               />

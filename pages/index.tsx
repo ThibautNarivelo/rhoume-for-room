@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Head from "next/head";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchDesigns } from "../utils/fetchDesigns";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
@@ -54,37 +54,34 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    console.log(aboutInfos),
-    (
-      <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0">
-        <Head>
-          <title>Rhoume</title>
-          <link rel="icon" href="favicon.ico" />
-        </Head>
+    <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0">
+      <Head>
+        <title>Rhoume</title>
+        <link rel="icon" href="favicon.ico" />
+      </Head>
 
-        <Header socials={socials} />
+      <Header socials={socials} />
 
-        <section id="home" className="snap-start">
-          <Masthome designs={designs} />
-        </section>
+      <section id="home" className="snap-start">
+        <Masthome designs={designs} />
+      </section>
 
-        <section id="about" className="snap-center">
-          <About aboutInfos={aboutInfos} />
-        </section>
+      <section id="about" className="snap-center">
+        <About aboutInfos={aboutInfos} />
+      </section>
 
-        <section id="images-section" className="snap-center">
-          <ImagesSection posts={posts} />
-        </section>
+      <section id="images-section" className="snap-center">
+        <ImagesSection posts={posts} />
+      </section>
 
-        <section id="faq" className="snap-center">
-          <Faq pageInfos={pageInfos} />
-        </section>
+      <section id="faq" className="snap-center">
+        <Faq pageInfos={pageInfos} />
+      </section>
 
-        <section id="footer" className="snap-center">
-          <Footer />
-        </section>
-      </div>
-    )
+      <section id="footer" className="snap-center">
+        <Footer />
+      </section>
+    </div>
   );
 };
 

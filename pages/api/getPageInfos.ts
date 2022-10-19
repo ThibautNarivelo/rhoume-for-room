@@ -5,7 +5,7 @@ import { sanityClient } from "../../sanity";
 import { PageInfo } from "../../typings";
 
 const query = groq`
-*[_type == "pageInfo"]| order(orderId asc)`
+*[_type == "pageInfo"]`
 
 type Data = {
     pageInfos: PageInfo[]

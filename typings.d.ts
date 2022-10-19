@@ -39,6 +39,15 @@ export interface PageInfo extends SanityBody {
     };
     title: string;
     body:[PortableTextBlock];
+    beforeCareTitle:string;
+    beforeCareBody:[PortableTextBlock];
+    afterCareTitle:string;
+    afterCareBody:[PortableTextBlock];
+    bookingsTitle:string;
+    bookingsBody:[PortableTextBlock];
+    appointmentsTitle:string;
+    appointmentsBody:[PortableTextBlock];
+
 }
 export interface AboutInfo extends SanityBody {
     _type: "aboutInfo";
