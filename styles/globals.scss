@@ -21,14 +21,22 @@ body {
   }
 
   .faqContainer {
-    @apply w-screen h-screen p-5 flex flex-col justify-start items-end pt-16 overflow-auto;
+    @apply w-screen h-screen text-r-mainblack p-5 flex flex-col justify-start items-center pt-16 overflow-auto cursor-default;
   }
 
   .faqTitle {
-    @apply  uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw];
+    @apply  uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw] hover:blur-sm ease-in-out duration-500;
   }
 
   .faqBody {
-    @apply  m-auto text-sm w-auto h-auto p-20 md:px-[12vw] md:text-base;
+    @apply  m-auto space-y-1 text-sm w-auto h-auto p-20 md:px-[12vw] md:text-base xl:space-y-2;
+  }
+
+  .contactInput {
+    @apply  bg-r-black50/50 rounded-md px-6 py-4 focus:outline-none focus:ring-0  border-b-r-mainwhite/70 text-r-mainwhite/50 placeholder-r-white50 transition-all hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite
+  }
+
+  .contactMeButton {
+    @apply m-5 p-1  text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700
   }
 }

@@ -30,9 +30,6 @@ export const Header: FC<Props> = ({ socials }) => {
             viewport={{ once: true }}
             className="flex flex-row justify-center items-center text-center"
           >
-            <a className="header" href="#home">
-              + home
-            </a>
             <a className="header" href="#about">
               + about
             </a>
@@ -45,6 +42,9 @@ export const Header: FC<Props> = ({ socials }) => {
             <Link href={social.url}>
               <a className="header">+ ig</a>
             </Link>
+            <a className="header" href="">
+              + contact
+            </a>
           </motion.div>
         </div>
       ))}

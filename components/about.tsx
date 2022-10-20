@@ -9,9 +9,10 @@ type Props = {
 
 export const About: FC<Props> = ({ aboutInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainwhite text-r-mainblack flex items-center justify-center text-center">
+    <div className="h-screen w-screen bg-r-mainwhite text-r-mainblack flex items-center justify-center text-center cursor-default">
       {aboutInfos?.map((aboutInfo) => (
         <motion.div
+          key={aboutInfo._id}
           initial={{
             y: 300,
             opacity: 0,
@@ -24,7 +25,6 @@ export const About: FC<Props> = ({ aboutInfos }) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          key={aboutInfo._id}
           className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
         >
           <div className="text-start hover:blur-sm transition ease-in-out duration-500">

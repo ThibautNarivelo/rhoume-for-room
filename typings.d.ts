@@ -23,12 +23,16 @@ export interface Social extends SanityBody {
 
 export interface Design extends SanityBody {
     _type: "design";
-    image: Image;
+    title: string;
     slug: {
         _type: string;
         current: string;
     };
-    title: string;
+rhoumeTitle: Image;
+forroomTitle
+rhoumeDesign: Image;
+emailAddress: email;
+contentButton: string;
 }
 
 export interface PageInfo extends SanityBody {

@@ -1,8 +1,8 @@
-export * from './Masthome';
-export * from './About';
+export * from './mastHome';
+export * from './about';
 export * from './Faq';
-export * from './footer';
+export * from './contactMe';
 export * from './Header';
-export * from './ImageSection';
+export * from './imageSection';
 
 export default null;

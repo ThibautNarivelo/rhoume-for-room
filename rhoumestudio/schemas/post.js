@@ -1,7 +1,10 @@
+import { MdPhotoLibrary } from "react-icons/md";
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: MdPhotoLibrary,
   fields: [
     {
       name: 'title',

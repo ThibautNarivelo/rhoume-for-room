@@ -1,7 +1,10 @@
+import { MdAccountCircle } from "react-icons/md";
+
 export default {
   name: 'social',
   title: 'Social',
   type: 'document',
+  icon: MdAccountCircle,
   fields: [
     {
       name: 'title',

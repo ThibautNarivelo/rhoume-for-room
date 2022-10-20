@@ -1,7 +1,10 @@
+import { MdCreate } from "react-icons/md";
+
 export default {
     name: 'pageInfo',
     title: 'Page Info',
     type: 'document',
+    icon: MdCreate,
     fields: [
         {
             name: 'title',

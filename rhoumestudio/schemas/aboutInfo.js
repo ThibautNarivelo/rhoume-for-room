@@ -1,7 +1,10 @@
+import { MdOutlineArticle } from "react-icons/md";
+
 export default {
     name: 'aboutInfo',
     title: 'About Info',
     type: 'document',
+    icon: MdOutlineArticle,
     fields: [
         {
             name: 'title',
@@ -28,14 +31,5 @@ export default {
             title: 'Bio',
             type: 'blockContent',
           },
-    ],
-    orderings: [
-      {
-        title: 'ID for Order',
-        name: 'orderIdAsc',
-        by: [
-          {field: 'orderId', direction: 'asc'}
-        ]
-      },
     ],
 }

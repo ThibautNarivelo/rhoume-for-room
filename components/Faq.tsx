@@ -14,6 +14,7 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
     <div className="h-screen w-screen bg-r-mainwhite">
       {pageInfos?.map((pageInfo) => (
         <motion.div
+          key={pageInfo._id}
           initial={{
             y: 300,
           }}
@@ -25,7 +26,7 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
           }}
           viewport={{ once: true }}
         >
-          <div key={pageInfo._id}>
+          <div>
             <AwesomeSlider
               animation="scaleOutAnimation"
               cssModule={AwesomeSliderStyle}

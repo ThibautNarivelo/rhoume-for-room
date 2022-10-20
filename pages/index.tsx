@@ -10,7 +10,7 @@ import { fetchAboutInfos } from "../utils/fetchAboutInfos";
 import {
   About,
   Faq,
-  Footer,
+  ContactMe,
   Header,
   Masthome,
   ImagesSection,
@@ -78,8 +78,8 @@ const Home: FC<Props> = ({
         <Faq pageInfos={pageInfos} />
       </section>
 
-      <section id="footer" className="snap-center">
-        <Footer />
+      <section id="contactMe" className="snap-center">
+        <ContactMe designs={designs} />
       </section>
     </div>
   );

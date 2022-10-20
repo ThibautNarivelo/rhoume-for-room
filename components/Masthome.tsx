@@ -28,7 +28,10 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             viewport={{ once: true }}
             className="w-[50vw] lg:w-[35vw] xl:[15vw] 2xl:w-[30vw] hover:blur-sm duration-700"
           >
-            <img src="./rhoume.png" alt="rhoume logo" />
+            <img
+              src={urlFor(design.rhoumeTitle).url()}
+              alt="Rhoume Title Design"
+            />
           </motion.div>
 
           <motion.div
@@ -44,7 +47,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             viewport={{ once: true }}
             className="w-[52vw] lg:w-[37vw] xl:[15vw] 2xl:w-[32vw] pb-2 hover:blur-sm duration-700"
           >
-            <img src="./for ___ room.png" alt="for_room" />
+            <img src={urlFor(design.forroomTitle).url()} alt="For_Room Title" />
           </motion.div>
 
           <motion.div
@@ -60,7 +63,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             viewport={{ once: true }}
             className="w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[35vw] hover:2xl:w-[40vw] hover:xl:w-[45vw]  ease-in-out duration-700"
           >
-            <img src={urlFor(design.image).url()} />
+            <img src={urlFor(design.rhoumeDesign).url()} alt="Rhoume Design" />
           </motion.div>
 
           <motion.div
@@ -76,9 +79,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 1,
             }}
           >
-            <button className="m-5 p-1 w-[30vw] hover:w-[55vw] lg:w-[25vw] hover:lg:w-[35vw] xl:w-[20vw] hover:xl:w-[35vw] 2xl:w-[12vw] hover:2xl:w-[30vw] text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700">
-              <a href="mailto:rhoume.forroom@gmail.com">Let's talk!</a>
-            </button>
+            <a href="#contactMe" className="contactMeButton">
+              <p>{design.contentButton}</p>
+            </a>
           </motion.div>
         </div>
       ))}
