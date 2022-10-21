@@ -10,7 +10,7 @@ interface MastHomeProps {
 export const Masthome: FC<MastHomeProps> = ({ designs }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen">
-      {designs.map((design) => (
+      {designs?.map((design) => (
         <div
           key={design._id}
           className="h-full w-full flex flex-col items-center justify-center"
@@ -79,9 +79,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 1,
             }}
           >
-            <a href="#contactMe" className="contactMeButton">
-              <p>{design.contentButton}</p>
-            </a>
+            <button className="m-5 p-1 w-[30vw] hover:w-[55vw] lg:w-[25vw] hover:lg:w-[35vw] xl:w-[20vw] hover:xl:w-[35vw] 2xl:w-[12vw] hover:2xl:w-[30vw] text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700">
+              <a href="#contactMe">{design.contentButton}</a>
+            </button>
           </motion.div>
         </div>
       ))}

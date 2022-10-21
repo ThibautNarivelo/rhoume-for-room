@@ -1,7 +1,7 @@
 import { MdEast } from "react-icons/md";
 
 export default {
-    name: 'design',
+    name: 'homePage',
     title: 'Home Page',
     type: 'document',
     icon: MdEast,
@@ -40,13 +40,6 @@ export default {
         name: 'rhoumeDesign',
         title: 'Rhoume Design',
         type: 'image',
-      },
-
-      {
-        name: 'emailAddress',
-        description: 'E-mail Address',
-        title: 'emailAddress',
-        type: 'email',
       },
       
       {

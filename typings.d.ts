@@ -59,9 +59,12 @@ export interface AboutInfo extends SanityBody {
         _type: string;
         current: string;
     };
+    rhoumeLocation: string;
+    rhoumeEmail: string;
     title: string;
     definition:[PortableTextBlock];
     bio:[PortableTextBlock];
+    contactMeTitle: string;
 }
 
 export interface Post extends SanityBody {

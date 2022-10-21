@@ -22,6 +22,17 @@ export default {
             },
           },
           {
+            name: 'rhoumeLocation',
+            title: 'Rhoume Location',
+            type: 'string',
+          },
+
+          {
+            name: 'rhoumeEmail',
+            title: 'Rhoume Email Adress',
+            type: 'email',
+          },
+          {
             name: 'definition',
             title: 'Definition',
             type: 'blockContent',
@@ -30,6 +41,11 @@ export default {
             name: 'bio',
             title: 'Bio',
             type: 'blockContent',
+          },
+          {
+            name: 'contactMeTitle',
+            title: 'Contact Me Title',
+            type: 'string',
           },
     ],
 }

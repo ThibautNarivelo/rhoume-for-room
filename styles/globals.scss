@@ -13,7 +13,7 @@ body {
 
 @layer components {
   .header {
-    @apply w-full h-full drop-shadow-lg  bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+    @apply w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
   }
 
   .aboutHover {
@@ -33,10 +33,10 @@ body {
   }
 
   .contactInput {
-    @apply  bg-r-black50/50 rounded-md px-6 py-4 focus:outline-none focus:ring-0  border-b-r-mainwhite/70 text-r-mainwhite/50 placeholder-r-white50 transition-all hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite
+    @apply resize-y bg-r-black50/50 rounded-md px-2 md:px-6 py-4 
+    focus:outline-none focus:ring-0 border-b-r-mainwhite/70 
+    text-r-mainwhite/50 placeholder-r-white50 transition-all 
+    hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite
   }
 
-  .contactMeButton {
-    @apply m-5 p-1  text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700
-  }
 }

@@ -54,7 +54,7 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0">
+    <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
       <Head>
         <title>Rhoume</title>
         <link rel="icon" href="favicon.ico" />
@@ -79,7 +79,7 @@ const Home: FC<Props> = ({
       </section>
 
       <section id="contactMe" className="snap-center">
-        <ContactMe designs={designs} />
+        <ContactMe aboutInfos={aboutInfos} />
       </section>
     </div>
   );

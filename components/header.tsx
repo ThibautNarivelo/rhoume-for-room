@@ -39,12 +39,12 @@ export const Header: FC<Props> = ({ socials }) => {
             <a className="header" href="#faq">
               + faq
             </a>
+            <a className="header" href="#contactMe">
+              + contact
+            </a>
             <Link href={social.url}>
               <a className="header">+ ig</a>
             </Link>
-            <a className="header" href="">
-              + contact
-            </a>
           </motion.div>
         </div>
       ))}
