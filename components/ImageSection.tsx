@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import Link from "next/link";
 import { Post } from "../typings";
 import { urlFor } from "../sanity";
-import { motion } from "framer-motion";
 
 type Props = {
   posts: Post[];
@@ -15,11 +14,13 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         {posts?.map((post) => (
           <div key={post._id} className="carousel carousel-item cursor-pointer">
             <Link href={`/post/${post.slug?.current}`}>
-              <img
-                className="rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300"
-                src={urlFor(post.image).url()!}
-                alt="rhoume's pictures"
-              />
+              {post.image && (
+                <img
+                  className="rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300"
+                  src={urlFor(post.image).url()!}
+                  alt="rhoume's pictures"
+                />
+              )}
             </Link>
           </div>
         ))}

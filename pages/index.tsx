@@ -1,20 +1,18 @@
 import React, { FC } from "react";
-import Head from "next/head";
-import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
+import { Header } from "../components/Header";
+import { About } from "../components/About";
+import { ContactMe } from "../components/contactMe";
+import { Faq } from "../components/Faq";
+import { ImagesSection } from "../components/ImageSection";
+import { Masthome } from "../components/MastHome";
 import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchDesigns } from "../utils/fetchDesigns";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
 import { fetchPosts } from "../utils/fetchPosts";
 import { fetchAboutInfos } from "../utils/fetchAboutInfos";
-import {
-  About,
-  Faq,
-  ContactMe,
-  Header,
-  Masthome,
-  ImagesSection,
-} from "../components";
+import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
+import Head from "next/head";
 
 interface Props {
   socials: Social[];
