@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Header } from "../components/Header";
-import { About } from "../components/About";
 import { ContactMe } from "../components/contactMe";
+import { About } from "../components/About";
 import { Faq } from "../components/Faq";
 import { ImagesSection } from "../components/ImageSection";
 import { Masthome } from "../components/MastHome";
