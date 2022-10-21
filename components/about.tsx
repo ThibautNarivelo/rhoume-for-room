@@ -47,4 +47,4 @@ export const About: FC<Props> = ({ aboutInfos }) => {
   );
 };
 
-export default null;
+// eslint-disable-next-line import/no-anonymous-default-export

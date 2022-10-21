@@ -95,5 +95,3 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
     </div>
   );
 };
-
-export default null;

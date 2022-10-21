@@ -39,4 +39,7 @@ body {
     hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite
   }
 
+  .imageContainer {
+    @apply rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300;
+  }
 }

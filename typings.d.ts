@@ -77,3 +77,4 @@ export interface Post extends SanityBody {
         current: string;
     }; 
 }
+

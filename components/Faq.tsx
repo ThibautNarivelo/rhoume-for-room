@@ -73,5 +73,3 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
     </div>
   );
 };
-
-export default null;

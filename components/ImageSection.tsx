@@ -28,5 +28,3 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
     </div>
   );
 };
-
-export default null;

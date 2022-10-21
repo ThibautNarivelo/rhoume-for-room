@@ -51,5 +51,3 @@ export const Header: FC<Props> = ({ socials }) => {
     </div>
   );
 };
-
-export default null;
