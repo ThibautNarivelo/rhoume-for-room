@@ -76,7 +76,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               opacity: 1,
             }}
             transition={{
-              duration: 1,
+              duration: 1.5,
             }}
           >
             <button className="m-5 p-1 w-[30vw] hover:w-[55vw] lg:w-[25vw] hover:lg:w-[35vw] xl:w-[20vw] hover:xl:w-[35vw] 2xl:w-[12vw] hover:2xl:w-[30vw] text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700">

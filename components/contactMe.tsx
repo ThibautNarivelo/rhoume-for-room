@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AboutInfo } from "../typings";
 import {
@@ -26,21 +25,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
     window.location.href = `mailto:rhoume.forroom@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email}) ${formData.name}`;
   };
   return (
-    <motion.div
-      initial={{
-        y: 20,
-        opacity: 0,
-      }}
-      whileInView={{
-        y: 0,
-        opacity: 1,
-      }}
-      viewport={{ once: true }}
-      transition={{
-        duration: 0.5,
-      }}
-      className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex relative text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center"
-    >
+    <div className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex relative text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center">
       {aboutInfos?.map((aboutInfo) => (
         <div key={aboutInfo._id} className="flex flex-col space-y-10">
           <p className="text-center text-xl hover:blur-sm duration-300">
@@ -107,7 +92,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
           </div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 };
 
