@@ -22,7 +22,7 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
               opacity: 1,
             }}
             transition={{
-              duration: 1,
+              duration: 0.5,
             }}
             viewport={{ once: true }}
             className="carousel carousel-item cursor-pointer"

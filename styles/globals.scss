@@ -13,7 +13,7 @@ body {
 
 @layer components {
   .header {
-    @apply w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
   }
 
   .aboutHover {
@@ -33,7 +33,7 @@ body {
   }
 
   .contactInput {
-    @apply resize-y bg-r-black50/50 rounded-md px-2 md:px-6 py-4 
+    @apply resize-y  bg-r-black50/50 rounded-md px-2 md:px-6 py-4 
     focus:outline-none focus:ring-0 border-b-r-mainwhite/70 
     text-r-mainwhite/50 placeholder-r-white50 transition-all 
     hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite

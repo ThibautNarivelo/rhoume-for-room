@@ -2,8 +2,12 @@ import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AboutInfo } from "../typings";
-import { MapPinIcon, InboxArrowDownIcon } from "@heroicons/react/24/outline";
-
+import {
+  MapPinIcon,
+  InboxArrowDownIcon,
+  ArrowSmallUpIcon,
+} from "@heroicons/react/24/outline";
+import PortableText from "react-portable-text";
 
 type Inputs = {
   name: string;
@@ -35,7 +39,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
       transition={{
         duration: 0.5,
       }}
-      className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center"
+      className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex relative text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center"
     >
       {aboutInfos?.map((aboutInfo) => (
         <div key={aboutInfo._id} className="flex flex-col space-y-10">
@@ -89,10 +93,20 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
               className="cursor-pointer m-20 hover:m-1 p-1 text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-300"
             />
           </form>
+          <div className="z-30 absolute bg-r-mainwhite/10 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack  bottom-10 right-10 h-10 w-10 animate-bounce duration-700">
+            <a className="cursor-pointer" href="#home">
+              <ArrowSmallUpIcon />
+            </a>
+          </div>
+          <div className="z-10 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/30 ease-in-out duration-700 ">
+            <PortableText
+              dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+              projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+              content={aboutInfo.copyrightsInfo}
+            />
+          </div>
         </div>
       ))}
-      // TODO: Scroll to the top button
-
     </motion.div>
   );
 };

@@ -47,5 +47,10 @@ export default {
             title: 'Contact Me Title',
             type: 'string',
           },
+          {
+            name: 'copyrightsInfo',
+            title: 'Copyrights Information',
+            type: 'blockContent',
+          },
     ],
 }

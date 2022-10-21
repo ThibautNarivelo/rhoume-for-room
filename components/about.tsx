@@ -9,7 +9,7 @@ type Props = {
 
 export const About: FC<Props> = ({ aboutInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainwhite text-r-mainblack flex items-center justify-center text-center cursor-default">
+    <div className="h-screen w-screen bg-r-mainwhite text-r-mainblack flex items-center justify-center text-center cursor-default select-none">
       {aboutInfos?.map((aboutInfo) => (
         <motion.div
           key={aboutInfo._id}

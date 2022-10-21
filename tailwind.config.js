@@ -1,10 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
-  ],
+  content: {
+    files:['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
+  },
   theme: {
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui'],
@@ -44,5 +42,9 @@ module.exports = {
     require('flowbite/plugin'),
     require("daisyui"),
     require('tailwind-scrollbar'),
-],
+  ],
+  safelist: [
+    '!duration-0',
+    '!delay-0',
+  ],
 }

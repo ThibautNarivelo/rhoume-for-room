@@ -65,6 +65,7 @@ export interface AboutInfo extends SanityBody {
     definition:[PortableTextBlock];
     bio:[PortableTextBlock];
     contactMeTitle: string;
+    copyrightsInfo:[PortableTextBlock];
 }
 
 export interface Post extends SanityBody {
