@@ -22,7 +22,7 @@ export const About: FC<Props> = ({ aboutInfos }) => {
             opacity: 1,
           }}
           transition={{
-            duration: 1,
+            duration: 0.6,
           }}
           viewport={{ once: true }}
           className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"

@@ -1,11 +1,7 @@
 import React, { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AboutInfo } from "../typings";
-import {
-  MapPinIcon,
-  InboxArrowDownIcon,
-  ArrowSmallUpIcon,
-} from "@heroicons/react/24/outline";
+import { MapPinIcon, InboxArrowDownIcon } from "@heroicons/react/24/outline";
 import PortableText from "react-portable-text";
 
 type Inputs = {
@@ -33,11 +29,11 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
           </p>
           <div className="space-y-5">
             <div className="flex items-center space-x-5">
-              <MapPinIcon className="text-r-white50 h-7 w-7 animate-pulse" />
+              <MapPinIcon className="text-r-white10 h-7 w-7 animate-pulse" />
               <p className="text-xl">{aboutInfo.rhoumeLocation}</p>
             </div>
             <div className="flex items-center space-x-5">
-              <InboxArrowDownIcon className="text-r-white50 h-7 w-7 animate-pulse" />
+              <InboxArrowDownIcon className="text-r-white10 h-7 w-7 animate-pulse" />
               <p className="text-xl">{aboutInfo.rhoumeEmail}</p>
             </div>
           </div>
@@ -78,12 +74,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
               className="cursor-pointer m-20 hover:m-1 p-1 text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-300"
             />
           </form>
-          <div className="z-30 absolute bg-r-mainwhite/10 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack  bottom-10 right-10 h-10 w-10 animate-bounce duration-700">
-            <a className="cursor-pointer" href="#home">
-              <ArrowSmallUpIcon />
-            </a>
-          </div>
-          <div className="z-10 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/30 ease-in-out duration-700 ">
+          <div className="z-40 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/70 ease-in-out duration-700 ">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}

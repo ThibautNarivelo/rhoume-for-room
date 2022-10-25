@@ -21,7 +21,7 @@ body {
   }
 
   .faqContainer {
-    @apply w-screen h-screen text-r-mainblack p-5 flex flex-col justify-start items-center pt-16 overflow-auto cursor-default;
+    @apply w-screen h-screen text-r-mainwhite p-5 flex flex-col justify-start items-center pt-16 overflow-auto cursor-default;
   }
 
   .faqTitle {
@@ -33,10 +33,10 @@ body {
   }
 
   .contactInput {
-    @apply resize-y  bg-r-black50/50 rounded-md px-2 md:px-6 py-4 
-    focus:outline-none focus:ring-0 border-b-r-mainwhite/70 
-    text-r-mainwhite/50 placeholder-r-white50 transition-all 
-    hover:text-r-mainwhite focus:text-r-mainwhite focus:border-r-mainwhite
+    @apply resize-y  bg-r-white50/30 rounded-md px-2 md:px-6 py-4 
+    focus:outline-none focus:ring-0 border-b-r-mainblack/70 
+    text-r-mainblack/50 placeholder-r-white50 transition-all 
+    hover:text-r-mainblack focus:text-r-mainblack focus:border-r-mainblack focus:bg-r-mainwhite/40
   }
 
   .imageContainer {

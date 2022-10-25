@@ -4,7 +4,7 @@ $transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
 $slider-height-percentage: 60%;
 $slider-transition-duration: 575ms;
 
-$organic-arrow-color: #6a6a6a;
+$organic-arrow-color: #eeebdc;
 $organic-arrow-thickness: 4px;
 $organic-arrow-height: 40px;
 $organic-arrow-border-radius: 0;
@@ -15,11 +15,12 @@ $control-button-hover-opacity: 0.75;
 $control-button-background: transparent;
 $loader-bar-color: #851515;
 $loader-bar-height: 6px;
-$control-bullet-color: #6a6a6a;
-$control-bullet-active-color: #6a6a6a;
-$content-background-color: #eeebdc;
+$control-bullet-color: #242424;
+$control-bullet-active-color: #242424;
+$content-background-color: #242424 ;
 
 %fill-parent {
+  z-index: -10;
   display: block;
   position: absolute;
   width: 100%;
@@ -41,7 +42,7 @@ $content-background-color: #eeebdc;
 
 %clear-selection {
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: #242424;
   -webkit-tap-highlight-color: transparent;
 }
 

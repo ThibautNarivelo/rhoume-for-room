@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
 import { Header } from "../components/header";
 import { Masthome } from "../components/Masthome";
 import { About } from "../components/about";
 import { ContactMe } from "../components/contactMe";
 import { Faq } from "../components/Faq";
 import { ImagesSection } from "../components/ImageSection";
-import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
-import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchDesigns } from "../utils/fetchDesigns";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
@@ -72,12 +72,12 @@ const Home: FC<Props> = ({
         <ImagesSection posts={posts} />
       </section>
 
-      <section id="faq" className="snap-center">
-        <Faq pageInfos={pageInfos} />
-      </section>
-
       <section id="contactMe" className="snap-center">
         <ContactMe aboutInfos={aboutInfos} />
+      </section>
+
+      <section id="faq" className="snap-center">
+        <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
       </section>
     </div>
   );

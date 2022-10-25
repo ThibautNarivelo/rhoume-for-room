@@ -36,11 +36,11 @@ export const Header: FC<Props> = ({ socials }) => {
             <a className="header" href="#images-section">
               + photos
             </a>
-            <a className="header" href="#faq">
-              + faq
-            </a>
             <a className="header" href="#contactMe">
               + contact
+            </a>
+            <a className="header" href="#faq">
+              + faq
             </a>
             <Link href={social.url}>
               <a className="header">+ ig</a>

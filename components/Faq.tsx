@@ -1,31 +1,20 @@
 import React, { FC } from "react";
-import { PageInfo } from "../typings";
-import { motion } from "framer-motion";
+import { AboutInfo, PageInfo } from "../typings";
 import PortableText from "react-portable-text";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyle from "./module-component/awesomeslider.module.scss";
+import ArrowSmallUpIcon from "@heroicons/react/24/outline/ArrowSmallUpIcon";
 
 type Props = {
   pageInfos: PageInfo[];
+  aboutInfos: AboutInfo[];
 };
 
-export const Faq: FC<Props> = ({ pageInfos }) => {
+export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainwhite">
+    <div className="h-screen w-screen bg-r-mainblack relative">
       {pageInfos?.map((pageInfo) => (
-        <motion.div
-          key={pageInfo._id}
-          initial={{
-            y: 350,
-          }}
-          whileInView={{
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          viewport={{ once: true }}
-        >
+        <div key={pageInfo._id}>
           <AwesomeSlider
             animation="scaleOutAnimation"
             cssModule={AwesomeSliderStyle}
@@ -68,7 +57,13 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
               />
             </div>
           </AwesomeSlider>
-        </motion.div>
+
+          <div className="z-50 absolute bg-r-mainwhite/10 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack  bottom-10 right-10 h-10 w-10 animate-bounce duration-700">
+            <a className="cursor-pointer" href="#home">
+              <ArrowSmallUpIcon />
+            </a>
+          </div>
+        </div>
       ))}
     </div>
   );
