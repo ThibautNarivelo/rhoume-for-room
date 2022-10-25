@@ -1,0 +1,6 @@
+export { About } from "./About"
+export { ContactMe } from "./ContactMe"
+export { Faq } from "./Faq"
+export { Header } from "./Header"
+export { ImagesSection } from "./ImageSection"
+export { Masthome } from "./MastHome"
