@@ -7,7 +7,7 @@ import { ContactMe } from "../components/ContactMe";
 import { Faq } from "../components/Faq";
 import { ImagesSection } from "../components/ImageSection";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchDesigns } from "../utils/fetchDesigns";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
@@ -22,7 +22,7 @@ interface Props {
   aboutInfos: AboutInfo[];
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const socials: Social[] = await fetchSocials();
   const designs: Design[] = await fetchDesigns();
   const pageInfos: PageInfo[] = await fetchPageInfos();
