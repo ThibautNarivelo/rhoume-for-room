@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import Head from "next/head";
-import { Header } from "../components/Header";
-import { Masthome } from "../components/MastHome";
-import { About } from "../components/About";
-import { ContactMe } from "../components/ContactMe";
-import { Faq } from "../components/Faq";
-import { ImagesSection } from "../components/ImageSection";
+import { Header } from "../components/header";
+import { Masthome } from "../components/mastHome";
+import { About } from "../components/about";
+import { ContactMe } from "../components/contactMe";
+import { Faq } from "../components/faq";
+import { ImagesSection } from "../components/imageSection";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
 import { GetStaticProps } from "next";
 import { fetchSocials } from "../utils/fetchSocials";
