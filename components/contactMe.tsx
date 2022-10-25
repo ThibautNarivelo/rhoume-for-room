@@ -46,13 +46,13 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
               <input
                 {...register("name")}
                 placeholder="Name"
-                className="contactInput"
+                className="contactInput contactNano"
                 type="text"
               />
               <input
                 {...register("email")}
                 placeholder="Email"
-                className="contactInput"
+                className="contactInput contactNano"
                 type="email"
               />
             </div>
@@ -60,14 +60,14 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
             <input
               {...register("subject")}
               placeholder="Subject"
-              className="contactInput"
+              className="contactInput contactNano"
               type="text"
             />
 
             <textarea
               {...register("message")}
               placeholder="Message"
-              className="contactInput"
+              className="contactInput contactNano"
             />
             <input
               type="submit"

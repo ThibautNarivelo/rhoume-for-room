@@ -11,6 +11,14 @@ body {
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
+.contactNano {
+  border-radius: 52px;
+  background: #242424;
+  box-shadow:  5px 5px 10px #1e1e1e,
+               -5px -5px 10px #2a2a2a;
+  
+}
+
 @layer components {
   .header {
     @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
@@ -33,10 +41,10 @@ body {
   }
 
   .contactInput {
-    @apply resize-y  bg-r-white50/30 rounded-md px-2 md:px-6 py-4 
-    focus:outline-none focus:ring-0 border-b-r-mainblack/70 
-    text-r-mainblack/50 placeholder-r-white50 transition-all 
-    hover:text-r-mainblack focus:text-r-mainblack focus:border-r-mainblack focus:bg-r-mainwhite/40
+    @apply resize-none rounded-md px-2 md:px-6 py-4 
+    focus:outline-none ring-0 focus:ring-0 border-none 
+    text-r-mainwhite placeholder:text-r-mainwhite/50 focus:bg-r-mainwhite/5 transition-colors
+  
   }
 
   .imageContainer {
