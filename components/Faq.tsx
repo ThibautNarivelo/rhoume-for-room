@@ -16,7 +16,7 @@ export const Faq: FC<Props> = ({ pageInfos }) => {
         <motion.div
           key={pageInfo._id}
           initial={{
-            y: 300,
+            y: 350,
           }}
           whileInView={{
             y: 0,
