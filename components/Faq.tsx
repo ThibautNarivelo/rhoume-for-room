@@ -12,51 +12,51 @@ type Props = {
 
 export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainblack relative">
+    <div className="h-full w-screen bg-r-mainblack relative snap-y snap-mandatory">
       {pageInfos?.map((pageInfo) => (
         <div key={pageInfo._id}>
-          <AwesomeSlider
+          {/* <AwesomeSlider
             animation="scaleOutAnimation"
             cssModule={AwesomeSliderStyle}
-            className="w-screen h-screen flex justify-center items-center"
-          >
-            <div className="faqContainer">
-              <h3 className="faqTitle">{pageInfo.appointmentsTitle}</h3>
-              <PortableText
-                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                content={pageInfo.appointmentsBody}
-                className="faqBody"
-              />
-            </div>
-            <div className="faqContainer">
-              <h3 className="faqTitle">{pageInfo.bookingsTitle}</h3>
-              <PortableText
-                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                content={pageInfo.bookingsBody}
-                className="faqBody"
-              />
-            </div>
-            <div className="faqContainer">
-              <h3 className="faqTitle">{pageInfo.beforeCareTitle}</h3>
-              <PortableText
-                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                content={pageInfo.beforeCareBody}
-                className="faqBody"
-              />
-            </div>
-            <div className="faqContainer">
-              <h3 className="faqTitle">{pageInfo.afterCareTitle}</h3>
-              <PortableText
-                dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                content={pageInfo.afterCareBody}
-                className="faqBody"
-              />
-            </div>
-          </AwesomeSlider>
+            className="w-screen h-screen flex justify-center items-center" 
+          >*/}
+          <div className="snap-start w-screen h-screen faqContainer">
+            <h3 className="faqTitle">{pageInfo.appointmentsTitle}</h3>
+            <PortableText
+              dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+              projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+              content={pageInfo.appointmentsBody}
+              className="faqBody"
+            />
+          </div>
+          <div className="snap-start w-screen h-screen faqContainer">
+            <h3 className="faqTitle">{pageInfo.bookingsTitle}</h3>
+            <PortableText
+              dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+              projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+              content={pageInfo.bookingsBody}
+              className="faqBody"
+            />
+          </div>
+          <div className="snap-start w-screen h-screen faqContainer">
+            <h3 className="faqTitle">{pageInfo.beforeCareTitle}</h3>
+            <PortableText
+              dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+              projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+              content={pageInfo.beforeCareBody}
+              className="faqBody"
+            />
+          </div>
+          <div className="snap-start w-screen h-screen faqContainer">
+            <h3 className="faqTitle">{pageInfo.afterCareTitle}</h3>
+            <PortableText
+              dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+              projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+              content={pageInfo.afterCareBody}
+              className="faqBody"
+            />
+          </div>
+          {/* </AwesomeSlider> */}
 
           <div className="z-50 absolute bg-r-mainwhite/10 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack  bottom-10 right-10 h-10 w-10 animate-bounce duration-700">
             <a className="cursor-pointer" href="#home">

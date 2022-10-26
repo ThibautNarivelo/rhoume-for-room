@@ -40,7 +40,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 w-fit mx-auto"
+            className="flex flex-col space-y-4 w-fit mx-auto"
           >
             <div className="flex space-x-2">
               <input
@@ -71,7 +71,8 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
             />
             <input
               type="submit"
-              className="cursor-pointer m-20 hover:m-1 p-1 text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-300"
+              className="contactNano rounded-full px-2 md:px-6 py-4 border-solid border-2 border-r-mainblack text-r-mainwhite hover:shadow-inner hover:bg-r-r-black50  ease-in-out duration-500 transition-colors
+            "
             />
           </form>
           <div className="z-40 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/70 ease-in-out duration-700 ">

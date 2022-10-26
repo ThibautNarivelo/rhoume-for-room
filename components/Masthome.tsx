@@ -45,7 +45,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 1,
             }}
             viewport={{ once: true }}
-            className="w-[52vw] lg:w-[37vw] xl:[15vw] 2xl:w-[32vw] pb-2 hover:blur-sm duration-700"
+            className="w-[52vw] my-2 lg:w-[37vw] xl:[15vw] 2xl:w-[32vw] hover:blur-sm duration-700"
           >
             <img src={urlFor(design.forroomTitle).url()} alt="For_Room Title" />
           </motion.div>
@@ -61,7 +61,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 0.5,
             }}
             viewport={{ once: true }}
-            className="w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[35vw] hover:2xl:w-[40vw] hover:xl:w-[45vw]  ease-in-out duration-700"
+            className=" w-[55vw] hover:w-[60vw] md:w-[55vw] hover:md:w-[60vw] lg:w-[40vw] hover:lg:w-[45vw] xl:w-[40vw] 2xl:w-[35vw]  hover:2xl:w-[40vw] hover:xl:w-[45vw] ease-in-out duration-700"
           >
             <img src={urlFor(design.rhoumeDesign).url()} alt="Rhoume Design" />
           </motion.div>
@@ -79,7 +79,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               duration: 1,
             }}
           >
-            <button className="m-5 p-1 w-[30vw] hover:w-[55vw] lg:w-[25vw] hover:lg:w-[35vw] xl:w-[20vw] hover:xl:w-[35vw] 2xl:w-[12vw] hover:2xl:w-[30vw] text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700">
+            <button className="p-0 md:p-1 my-5 w-[28vw] hover:w-[55vw] lg:w-[25vw] hover:lg:w-[35vw] xl:w-[20vw] hover:xl:w-[35vw] 2xl:w-[12vw] hover:2xl:w-[30vw] text-r-mainwhite border-solid border-2 border-r-mainwhite rounded-full hover:bg-r-mainwhite hover:text-r-mainblack duration-700">
               <a href="#contactMe">{design.contentButton}</a>
             </button>
           </motion.div>

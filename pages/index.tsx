@@ -39,8 +39,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
     // Next.js will attempt to re-generate the page:
     // When a request comes in
-    // At most once every 5 seconds
-    revalidate: 5,
+    // At most once every 2 seconds
+    revalidate: 2,
   };
 };
 
@@ -76,7 +76,7 @@ const Home: FC<Props> = ({
         <ContactMe aboutInfos={aboutInfos} />
       </section>
 
-      <section id="faq" className="snap-center">
+      <section id="faq" className="snap-start">
         <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
       </section>
     </div>

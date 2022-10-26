@@ -29,9 +29,8 @@ export interface Design extends SanityBody {
         current: string;
     };
 rhoumeTitle: Image;
-forroomTitle
+forroomTitle: Image;
 rhoumeDesign: Image;
-emailAddress: email;
 contentButton: string;
 }
 

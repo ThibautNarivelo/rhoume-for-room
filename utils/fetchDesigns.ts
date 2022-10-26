@@ -3,7 +3,7 @@ import { sanityClient } from "../sanity";
 import { Design } from "../typings";
 
 const query = groq`
-    *[_type == "design"]
+    *[_type == "homePage"]
 `
 
 export const fetchDesigns = async() => {
