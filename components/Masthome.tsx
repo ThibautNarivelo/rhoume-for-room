@@ -15,7 +15,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
           key={design._id}
           className="h-full w-full flex flex-col items-center justify-center"
         >
-          {/* <motion.div
+          <motion.div
             initial={{
               opacity: 0,
             }}
@@ -32,9 +32,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
               src={urlFor(design.rhoumeTitle).url()}
               alt="Rhoume Title Design"
             />
-          </motion.div> */}
+          </motion.div>
 
-          {/* <motion.div
+          <motion.div
             initial={{
               opacity: 0,
             }}
@@ -48,7 +48,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs }) => {
             className="w-[52vw] my-2 lg:w-[37vw] xl:[15vw] 2xl:w-[32vw] hover:blur-sm duration-700"
           >
             <img src={urlFor(design.forroomTitle).url()} alt="For_Room Title" />
-          </motion.div> */}
+          </motion.div>
 
           <motion.div
             initial={{
