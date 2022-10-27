@@ -37,8 +37,37 @@ export default {
       },
   
       {
-        name: 'rhoumeDesign',
-        title: 'Rhoume Design',
+        name: 'rhoumeMainDesign',
+        title: 'Rhoume Main Design',
+        type: 'image',
+      },
+
+      {
+        name: 'rhoumeAboutDesign',
+        title: 'Rhoume About Design',
+        type: 'image',
+      },
+
+      {
+        name: 'rhoumePhotosDesign',
+        title: 'Rhoume Photos Design',
+        type: 'image',
+      },
+
+      {
+        name: 'rhoumeContactDesign',
+        title: 'Rhoume Contact Design',
+        type: 'image',
+      },
+
+      {
+        name: 'rhoumeFaqDesign',
+        title: 'Rhoume FAQ Design',
+        type: 'image',
+      },
+      {
+        name: 'rhoumeIGDesign',
+        title: 'Rhoume IG Design',
         type: 'image',
       },
       

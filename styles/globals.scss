@@ -11,12 +11,27 @@ body {
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
+.postersWrapper {
+display: flex;
+
+}
+
+.hoverPosters {
+  position: absolute;
+  display: none;
+  z-index: -10;
+}
+
+.postersWrapper:hover > .hoverPosters {
+  display: block;
+  z-index: 10;
+}
+
 .contactNano {
   border-radius: 40px;
   background: #242424;
   box-shadow:  5px 5px 10px #1e1e1e,
                -5px -5px 10px #2a2a2a;
-  
 }
 
 @layer components {

@@ -30,7 +30,12 @@ export interface Design extends SanityBody {
     };
 rhoumeTitle: Image;
 forroomTitle: Image;
-rhoumeDesign: Image;
+rhoumeMainDesign: Image;
+rhoumeAboutDesign: Image;
+rhoumePhotosDesign: Image;
+rhoumeContactDesign: Image;
+rhoumeFaqDesign: Image;
+rhoumeIGDesign: Image;
 contentButton: string;
 }
 

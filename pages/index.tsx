@@ -58,10 +58,10 @@ const Home: FC<Props> = ({
         <link rel="icon" href="favicon.ico" />
       </Head>
 
-      <Header socials={socials} />
+      {/* <Header socials={socials} /> */}
 
       <section id="home" className="snap-start">
-        <Masthome designs={designs} />
+        <Masthome designs={designs} socials={socials} />
       </section>
 
       <section id="about" className="snap-center">
