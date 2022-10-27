@@ -29,11 +29,11 @@ body {
   }
 
   .faqContainer {
-    @apply w-screen h-screen text-r-mainwhite p-5 flex flex-col justify-start items-center pt-16 overflow-auto cursor-default;
+    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-start items-center pt-16 cursor-default;
   }
 
   .faqTitle {
-    @apply  uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw] hover:blur-sm ease-in-out duration-500;
+    @apply uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw] hover:blur-sm ease-in-out duration-500;
   }
 
   .faqBody {

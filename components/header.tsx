@@ -42,8 +42,8 @@ export const Header: FC<Props> = ({ socials }) => {
             <a className="header" href="#faq">
               faq
             </a>
-            <Link href={social.url}>
-              <a className="header">ig</a>
+            <Link href={social.url} className="header">
+              ig
             </Link>
           </motion.div>
         </div>

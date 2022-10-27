@@ -12,15 +12,10 @@ type Props = {
 
 export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
   return (
-    <div className="h-full w-screen bg-r-mainblack relative snap-y snap-mandatory">
+    <div className="h-full w-screen bg-r-mainblack relative snap-mandatory snap-y">
       {pageInfos?.map((pageInfo) => (
         <div key={pageInfo._id}>
-          {/* <AwesomeSlider
-            animation="scaleOutAnimation"
-            cssModule={AwesomeSliderStyle}
-            className="w-screen h-screen flex justify-center items-center" 
-          >*/}
-          <div className="snap-start w-screen h-screen faqContainer">
+          <div className="faqContainer">
             <h3 className="faqTitle">{pageInfo.appointmentsTitle}</h3>
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -29,7 +24,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               className="faqBody"
             />
           </div>
-          <div className="snap-start w-screen h-screen faqContainer">
+          <div className="faqContainer">
             <h3 className="faqTitle">{pageInfo.bookingsTitle}</h3>
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -38,7 +33,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               className="faqBody"
             />
           </div>
-          <div className="snap-start w-screen h-screen faqContainer">
+          <div className="faqContainer">
             <h3 className="faqTitle">{pageInfo.beforeCareTitle}</h3>
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -47,7 +42,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               className="faqBody"
             />
           </div>
-          <div className="snap-start w-screen h-screen faqContainer">
+          <div className="faqContainer">
             <h3 className="faqTitle">{pageInfo.afterCareTitle}</h3>
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
