@@ -24,7 +24,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
     <div className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex relative text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center">
       {aboutInfos?.map((aboutInfo) => (
         <div key={aboutInfo._id} className="flex flex-col space-y-10">
-          <p className="text-center text-xl hover:blur-sm duration-300">
+          <p className="uppercase text-center tracking-[5vw] md:tracking-[3vw] xl:tracking-[3vw] 2xl:tracking-[2.5vw] text-xl hover:blur-sm duration-300">
             {aboutInfo.contactMeTitle}
           </p>
           <div className="space-y-5">

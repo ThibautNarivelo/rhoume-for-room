@@ -11,21 +11,6 @@ body {
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
-.postersWrapper {
-display: flex;
-
-}
-
-.hoverPosters {
-  position: absolute;
-  display: none;
-  z-index: -10;
-}
-
-.postersWrapper:hover > .hoverPosters {
-  display: block;
-  z-index: 10;
-}
 
 .contactNano {
   border-radius: 40px;
@@ -37,6 +22,11 @@ display: flex;
 @layer components {
   .header {
     @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+  }
+
+  .mainPosters {
+    @apply z-10  w-[75vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
+            
   }
 
   .aboutHover {

@@ -60,7 +60,7 @@ const Home: FC<Props> = ({
 
       {/* <Header socials={socials} /> */}
 
-      <section id="home" className="snap-start">
+      <section id="home" className="snap-center">
         <Masthome designs={designs} socials={socials} />
       </section>
 
@@ -76,7 +76,7 @@ const Home: FC<Props> = ({
         <ContactMe aboutInfos={aboutInfos} />
       </section>
 
-      <section id="faq" className="snap-start">
+      <section id="faq" className="snap-center">
         <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
       </section>
     </div>
