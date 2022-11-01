@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import { AboutInfo, PageInfo } from "../typings";
 import PortableText from "react-portable-text";
-import AwesomeSlider from "react-awesome-slider";
-import AwesomeSliderStyle from "./module-component/awesomeslider.module.scss";
 import ArrowSmallUpIcon from "@heroicons/react/24/outline/ArrowSmallUpIcon";
 
 type Props = {
