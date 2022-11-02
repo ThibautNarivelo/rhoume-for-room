@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
-import { Header } from "../components/header";
 import { Masthome } from "../components/Masthome";
 import { About } from "../components/about";
 import { ContactMe } from "../components/contactMe";
@@ -57,8 +56,6 @@ const Home: FC<Props> = ({
         <title>Rhoume</title>
         <link rel="icon" href="favicon.ico" />
       </Head>
-
-      {/* <Header socials={socials} /> */}
 
       <section id="home" className="snap-center">
         <Masthome designs={designs} socials={socials} />

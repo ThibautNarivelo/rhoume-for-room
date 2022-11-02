@@ -14,15 +14,13 @@ export const About: FC<Props> = ({ aboutInfos }) => {
         <motion.div
           key={aboutInfo._id}
           initial={{
-            y: 300,
             opacity: 0,
           }}
           whileInView={{
-            y: 0,
             opacity: 1,
           }}
           transition={{
-            duration: 0.6,
+            duration: 1,
           }}
           viewport={{ once: true }}
           className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
