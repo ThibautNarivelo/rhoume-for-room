@@ -22,11 +22,21 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen relative">
       {designs?.map((design) => (
-        <div
+        <motion.div
           key={design._id}
-          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-20 xl:px-[30vw]"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-12 xl:px-[30vw]"
         >
-          <div className="uppercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-6 text-lg text-end text-r-mainwhite transition-all">
+          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-5 text-lg text-center xl:text-end text-r-mainwhite transition-all">
             <a
               className="headerEffect"
               onMouseOver={() => setIsAboutPoster(true)}
@@ -72,37 +82,26 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center -space-x-[75vw] md:-space-x-[50vw] lg:-space-x-[40vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
+          <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
             <Zoom>
-              <motion.div
-                initial={{
-                  opacity: 0,
-                }}
-                whileInView={{
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 1,
-                }}
-                viewport={{ once: true }}
-              >
+              <div>
                 <Image
                   src={urlFor(design.rhoumeMainDesign).url()}
                   alt="Rhoume Design"
                   className="mainPosters -z-10"
-                  width={500}
-                  height={500}
+                  width={400}
+                  height={400}
                   quality={100}
                 />
-              </motion.div>
+              </div>
             </Zoom>
             {isAboutPoster && (
               <Image
                 src={urlFor(design.rhoumeAboutDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 quality={90}
               />
             )}
@@ -111,8 +110,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 src={urlFor(design.rhoumePhotosDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 quality={90}
               />
             )}
@@ -121,8 +120,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 src={urlFor(design.rhoumeContactDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 quality={90}
               />
             )}
@@ -131,8 +130,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 src={urlFor(design.rhoumeFaqDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 quality={90}
               />
             )}
@@ -141,13 +140,13 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 src={urlFor(design.rhoumeIGDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
-                width={500}
-                height={500}
+                width={400}
+                height={400}
                 quality={90}
               />
             )}
           </div>
-        </div>
+        </motion.div>
       ))}
       <div className="text-r-mainwhite w-7 h-7 absolute bottom-12 right-12 text-center lg:bottom-7 lg:right-7 animate-bounce opacity-50">
         <ArrowlongDown />
