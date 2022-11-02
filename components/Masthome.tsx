@@ -24,19 +24,19 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
       {designs?.map((design) => (
         <div
           key={design._id}
-          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-20 xl:p-[22vw]"
+          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-20 xl:px-[30vw]"
         >
-          <div className="uppercase tracking-[.5vw] flex flex-row xl:flex-col gap-6 text-lg text-center text-r-mainwhite transition-all">
-            <span>
-              <a
-                onMouseOver={() => setIsAboutPoster(true)}
-                onMouseLeave={() => setIsAboutPoster(false)}
-                href="#about"
-              >
-                about
-              </a>
-            </span>
+          <div className="uppercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-6 text-lg text-end text-r-mainwhite transition-all">
             <a
+              className="headerEffect"
+              onMouseOver={() => setIsAboutPoster(true)}
+              onMouseLeave={() => setIsAboutPoster(false)}
+              href="#about"
+            >
+              about
+            </a>
+            <a
+              className="headerEffect"
               onMouseOver={() => setIsPhotosPoster(true)}
               onMouseLeave={() => setIsPhotosPoster(false)}
               href="#images-section"
@@ -44,6 +44,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               photos
             </a>
             <a
+              className="headerEffect"
               onMouseOver={() => setIsContactPoster(true)}
               onMouseLeave={() => setIsContactPoster(false)}
               href="#contactMe"
@@ -51,6 +52,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               contact
             </a>
             <a
+              className="headerEffect"
               onMouseOver={() => setIsFqaPoster(true)}
               onMouseLeave={() => setIsFqaPoster(false)}
               href="#contactMe"
@@ -60,6 +62,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
 
             {socials?.map((social) => (
               <Link
+                className="headerEffect"
                 onMouseOver={() => setIsIGPoster(true)}
                 onMouseLeave={() => setIsIGPoster(false)}
                 key={social._id}
@@ -146,7 +149,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
         </div>
       ))}
-      <div className="text-r-mainwhite w-7 h-7 absolute bottom-12 right-12 lg:bottom-7 lg:right-7 animate-bounce opacity-50">
+      <div className="text-r-mainwhite w-7 h-7 absolute bottom-12 right-12 text-center lg:bottom-7 lg:right-7 animate-bounce opacity-50">
         <ArrowlongDown />
       </div>
     </div>

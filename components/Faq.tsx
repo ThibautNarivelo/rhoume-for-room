@@ -98,7 +98,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               className="faqBody"
             />
           </motion.div>
-          <div className="z-50 absolute bg-r-mainwhite/10 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack  bottom-10 right-10 h-10 w-10 animate-bounce duration-700">
+          <div className="z-50 absolute bg-r-mainwhite/25 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack bottom-3 right-5 lg:right-10 lg:bottom-10 h-10 w-10 animate-bounce duration-700">
             <a className="cursor-pointer" href="#home">
               <ArrowSmallUpIcon />
             </a>

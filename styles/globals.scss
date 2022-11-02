@@ -38,6 +38,11 @@ body {
             
   }
 
+.headerEffect {
+  @apply  hover:text-r-mainblack hover:bg-r-mainwhite hover:rounded-l-full px-2
+          ease-in-out duration-700 transition-all
+}
+
   .aboutHover {
     @apply hover:cursor-default hover:blur-sm ease-in-out duration-700;
   }

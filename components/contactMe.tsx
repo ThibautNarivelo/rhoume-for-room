@@ -1,8 +1,14 @@
 import React, { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { AboutInfo } from "../typings";
-import { MapPinIcon, InboxArrowDownIcon } from "@heroicons/react/24/outline";
+import { AboutInfo, Social } from "../typings";
+import Link from "next/link";
+import {
+  MapPinIcon,
+  InboxArrowDownIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import PortableText from "react-portable-text";
+import { motion } from "framer-motion";
 
 type Inputs = {
   name: string;
@@ -13,9 +19,10 @@ type Inputs = {
 
 interface ContactMeProps {
   aboutInfos: AboutInfo[];
+  socials: Social[];
 }
 
-export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
+export const ContactMe: FC<ContactMeProps> = ({ aboutInfos, socials }) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:rhoume.forroom@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email}) ${formData.name}`;
@@ -23,11 +30,24 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
   return (
     <div className="cursor-default w-screen h-screen bg-r-mainblack text-r-mainwhite flex relative text-center md:text-left md:flex-row max-w-7 xl px-10 justify-evenly mx-auto items-center">
       {aboutInfos?.map((aboutInfo) => (
-        <div key={aboutInfo._id} className="flex flex-col space-y-10">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          key={aboutInfo._id}
+          className="flex flex-col space-y-10"
+        >
           <p className="uppercase text-center tracking-[5vw] md:tracking-[3vw] xl:tracking-[3vw] 2xl:tracking-[2.5vw] text-xl hover:blur-sm duration-300">
             {aboutInfo.contactMeTitle}
           </p>
-          <div className="space-y-5">
+          <div className="space-y-3 text-lg">
             <div className="flex items-center space-x-5">
               <MapPinIcon className="text-r-white10 h-7 w-7 animate-pulse" />
               <p className="text-xl">{aboutInfo.rhoumeLocation}</p>
@@ -36,6 +56,16 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
               <InboxArrowDownIcon className="text-r-white10 h-7 w-7 animate-pulse" />
               <p className="text-xl">{aboutInfo.rhoumeEmail}</p>
             </div>
+            {socials?.map((social) => (
+              <Link
+                key={social._id}
+                className="flex items-center space-x-5"
+                href={social.url}
+              >
+                <UserCircleIcon className="text-r-white10 h-7 w-7 animate-pulse" />
+                <p>instagram.com/_rhoume</p>
+              </Link>
+            ))}
           </div>
 
           <form
@@ -82,7 +112,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos }) => {
               content={aboutInfo.copyrightsInfo}
             />
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

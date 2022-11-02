@@ -70,7 +70,7 @@ const Home: FC<Props> = ({
       </section>
 
       <section id="contactMe" className="snap-center">
-        <ContactMe aboutInfos={aboutInfos} />
+        <ContactMe aboutInfos={aboutInfos} socials={socials} />
       </section>
 
       <section id="faq" className="snap-center">
