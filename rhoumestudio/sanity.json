@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "project": {
+    "name": "rhoume_studio"
+  },
+  "api": {
+    "projectId": "nvyn8prv",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./theme/variableOverrides.css"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./components/myLogo.js"
+    }
+  ]
+}

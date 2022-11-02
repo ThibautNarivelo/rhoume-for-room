@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", "Charter", sans-serif;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: blue;
+  transform-origin: 0%;
+}
+
+.contactNano {
+  border-radius: 40px;
+  background: #242424;
+  box-shadow:  5px 5px 10px #1e1e1e,
+               -5px -5px 10px #2a2a2a;
+}
+
+@layer components {
+  .header {
+    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+  }
+
+  .mainPosters {
+    @apply z-10  w-[60vw] md:w-[45vw] lg:w-[30vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
+            
+  }
+
+.headerEffect {
+  @apply  xl:hover:text-r-mainblack xl:hover:bg-r-mainwhite xl:hover:rounded-l-full xl:px-3 
+          xl:ease-in-out xl:duration-700 transition-all
+}
+
+  .aboutHover {
+    @apply hover:cursor-default hover:blur-sm ease-in-out duration-700;
+  }
+
+  .faqContainer {
+    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-start items-center pt-16 cursor-default;
+  }
+
+  .faqTitle {
+    @apply uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw] hover:blur-sm ease-in-out duration-500;
+  }
+
+  .faqBody {
+    @apply text-justify my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[30vw] md:text-justify md:text-base xl:space-y-2;
+  }
+
+  .contactInput {
+    @apply resize-none rounded-md px-2 md:px-6 py-4 
+    focus:outline-none ring-0 focus:ring-0 border-none 
+    text-r-mainwhite placeholder:px-7 md:placeholder:px-2 placeholder:text-r-mainwhite/50 focus:bg-r-mainwhite/5 transition-colors
+  
+  }
+
+  .imageContainer {
+    @apply rounded-lg h-auto w-[60vw] md:w-[50vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300;
+  }
+
+}
