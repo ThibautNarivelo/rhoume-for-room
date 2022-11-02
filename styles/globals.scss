@@ -11,6 +11,15 @@ body {
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: blue;
+  transform-origin: 0%;
+}
 
 .contactNano {
   border-radius: 40px;
@@ -25,9 +34,14 @@ body {
   }
 
   .mainPosters {
-    @apply z-10  w-[75vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
+    @apply z-10  w-[60vw] md:w-[45vw] lg:w-[30vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
             
   }
+
+.headerEffect {
+  @apply  xl:hover:text-r-mainblack xl:hover:bg-r-mainwhite xl:hover:rounded-l-full xl:px-3 
+          xl:ease-in-out xl:duration-700 transition-all
+}
 
   .aboutHover {
     @apply hover:cursor-default hover:blur-sm ease-in-out duration-700;

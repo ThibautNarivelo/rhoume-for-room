@@ -4,6 +4,8 @@ import { Design, Social } from "../typings";
 import { urlFor } from "../sanity";
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
+import Image from "next/image";
+import ArrowlongDown from "@heroicons/react/24/outline/ArrowLongDownIcon";
 
 interface MastHomeProps {
   designs: Design[];
@@ -18,38 +20,50 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   const [isIGPoster, setIsIGPoster] = useState(false);
 
   return (
-    <div className="bg-r-mainblack h-screen w-screen">
+    <div className="bg-r-mainblack h-screen w-screen relative">
       {designs?.map((design) => (
-        <div
+        <motion.div
           key={design._id}
-          className="h-screen w-screen flex flex-col items-center justify-center p-20"
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          viewport={{ once: true }}
+          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-12 xl:px-[30vw]"
         >
-          <div className="flex flex-row gap-10 text-lg text-r-mainwhite transition-all">
-            <span>
-              <a
-                onMouseEnter={() => setIsAboutPoster(true)}
-                onMouseLeave={() => setIsAboutPoster(false)}
-                href="#about"
-              >
-                about
-              </a>
-            </span>
+          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-5 text-lg text-center xl:text-end text-r-mainwhite transition-all">
             <a
-              onMouseEnter={() => setIsPhotosPoster(true)}
+              className="headerEffect"
+              onMouseOver={() => setIsAboutPoster(true)}
+              onMouseLeave={() => setIsAboutPoster(false)}
+              href="#about"
+            >
+              about
+            </a>
+            <a
+              className="headerEffect"
+              onMouseOver={() => setIsPhotosPoster(true)}
               onMouseLeave={() => setIsPhotosPoster(false)}
               href="#images-section"
             >
               photos
             </a>
             <a
-              onMouseEnter={() => setIsContactPoster(true)}
+              className="headerEffect"
+              onMouseOver={() => setIsContactPoster(true)}
               onMouseLeave={() => setIsContactPoster(false)}
               href="#contactMe"
             >
               contact
             </a>
             <a
-              onMouseEnter={() => setIsFqaPoster(true)}
+              className="headerEffect"
+              onMouseOver={() => setIsFqaPoster(true)}
               onMouseLeave={() => setIsFqaPoster(false)}
               href="#contactMe"
             >
@@ -58,7 +72,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
 
             {socials?.map((social) => (
               <Link
-                onMouseEnter={() => setIsIGPoster(true)}
+                className="headerEffect"
+                onMouseOver={() => setIsIGPoster(true)}
                 onMouseLeave={() => setIsIGPoster(false)}
                 key={social._id}
                 href={social.url}
@@ -67,52 +82,75 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center -space-x-[75vw] md:-space-x-[50vw] lg:-space-x-[40vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
+          <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
             <Zoom>
-              <img
-                src={urlFor(design.rhoumeMainDesign).url()}
-                alt="Rhoume Design"
-                className="mainPosters -z-10"
-              />
+              <div>
+                <Image
+                  src={urlFor(design.rhoumeMainDesign).url()}
+                  alt="Rhoume Design"
+                  className="mainPosters -z-10"
+                  width={400}
+                  height={400}
+                  quality={100}
+                />
+              </div>
             </Zoom>
             {isAboutPoster && (
-              <img
+              <Image
                 src={urlFor(design.rhoumeAboutDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
+                width={400}
+                height={400}
+                quality={90}
               />
             )}
             {isPhotosPoster && (
-              <img
+              <Image
                 src={urlFor(design.rhoumePhotosDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
+                width={400}
+                height={400}
+                quality={90}
               />
             )}
             {isContactPoster && (
-              <img
+              <Image
                 src={urlFor(design.rhoumeContactDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
+                width={400}
+                height={400}
+                quality={90}
               />
             )}
             {isFaqPoster && (
-              <img
+              <Image
                 src={urlFor(design.rhoumeFaqDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
+                width={400}
+                height={400}
+                quality={90}
               />
             )}
             {isIGPoster && (
-              <img
+              <Image
                 src={urlFor(design.rhoumeIGDesign).url()}
                 alt="About Poster"
                 className="mainPosters"
+                width={400}
+                height={400}
+                quality={90}
               />
             )}
           </div>
-        </div>
+        </motion.div>
       ))}
+      <div className="text-r-mainwhite w-7 h-7 absolute bottom-12 right-12 text-center lg:bottom-7 lg:right-7 animate-bounce opacity-50">
+        <ArrowlongDown />
+      </div>
     </div>
   );
 };

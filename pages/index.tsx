@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
-import { Header } from "../components/header";
 import { Masthome } from "../components/Masthome";
 import { About } from "../components/about";
 import { ContactMe } from "../components/contactMe";
@@ -40,7 +39,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     // Next.js will attempt to re-generate the page:
     // When a request comes in
     // At most once every 2 seconds
-    revalidate: 2,
+    revalidate: 10,
   };
 };
 
@@ -52,13 +51,11 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className="bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
+    <div className=" bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
       <Head>
         <title>Rhoume</title>
         <link rel="icon" href="favicon.ico" />
       </Head>
-
-      {/* <Header socials={socials} /> */}
 
       <section id="home" className="snap-center">
         <Masthome designs={designs} socials={socials} />
@@ -73,7 +70,7 @@ const Home: FC<Props> = ({
       </section>
 
       <section id="contactMe" className="snap-center">
-        <ContactMe aboutInfos={aboutInfos} />
+        <ContactMe aboutInfos={aboutInfos} socials={socials} />
       </section>
 
       <section id="faq" className="snap-center">
