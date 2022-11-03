@@ -48,7 +48,7 @@ body {
   }
 
   .faqContainer {
-    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-start items-center pt-16 cursor-default;
+    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
   }
 
   .faqTitle {

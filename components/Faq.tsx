@@ -11,7 +11,7 @@ type Props = {
 
 export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
   return (
-    <div className="h-full w-screen bg-r-mainblack relative snap-mandatory snap-y">
+    <div className="h-full w-screen bg-r-mainblack flex flex-col justify-center items-center snap-mandatory snap-y">
       {pageInfos?.map((pageInfo) => (
         <div key={pageInfo._id}>
           <motion.div
@@ -98,13 +98,13 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               className="faqBody"
             />
           </motion.div>
-          <div className="z-50 absolute bg-r-mainwhite/25 hover:bg-r-mainwhite rounded-full p-2 text-r-mainblack bottom-3 right-5 lg:right-10 lg:bottom-10 h-10 w-10 animate-bounce duration-700">
-            <a className="cursor-pointer" href="#home">
-              <ArrowSmallUpIcon />
-            </a>
-          </div>
         </div>
       ))}
+      <div className="z-50 bg-r-mainwhite/25 hover:bg-r-mainwhite rounded-full p-2 mb-10 text-r-mainblack h-10 w-10 animate-bounce duration-700">
+        <a className="cursor-pointer" href="#home">
+          <ArrowSmallUpIcon />
+        </a>
+      </div>
     </div>
   );
 };
