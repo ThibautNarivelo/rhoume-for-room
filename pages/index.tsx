@@ -54,7 +54,10 @@ const Home: FC<Props> = ({
     <div className=" bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
       <Head>
         <title>Rhoume</title>
-        <meta name="Rhoume for room" content="Tattoo Artist" lang="en" />
+        <meta name="Rhoume" content="Tattoo Artist" lang="en" />
+        <meta name="Rhoume for room" content="Website of Rhoume" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon.ico" />
       </Head>
 
