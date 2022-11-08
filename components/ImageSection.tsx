@@ -13,16 +13,17 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center place-items-center">
       <div className="rounded-lg h-auto w-[75vw] md:w-[57vw] lg:w-[90vw] xl:w-[90vw] carousel mx-10">
-        {posts?.map((post) => (
-          <div key={post._id} className="carousel carousel-item cursor-pointer">
+        {posts.map((post) => (
+          <div key={post._id} className="carousel-item cursor-pointer">
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg h-auto w-[75vw] md:w-[57vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 snap-center ease-in-out duration-300"
+                  className="rounded-lg h-[110vw] md:h-[85vw] lg:h-[45vw] xl:h-[25vw] w-[75vw] md:w-[57vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
-                  width={400}
-                  height={400}
+                  aria-label="rhoume's pictures"
+                  width={500}
+                  height={500}
                   quality={100}
                 />
               </Zoom>

@@ -101,7 +101,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
         </div>
       ))}
       <div className="z-50 bg-r-mainwhite/25 hover:bg-r-mainwhite rounded-full p-2 mb-10 text-r-mainblack h-10 w-10 animate-bounce duration-700">
-        <a className="cursor-pointer" href="#home">
+        <a href="#home">
           <ArrowSmallUpIcon />
         </a>
       </div>
