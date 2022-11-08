@@ -21,6 +21,7 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
                   className="rounded-lg h-[110vw] md:h-[85vw] lg:h-[45vw] xl:h-[25vw] w-[75vw] md:w-[57vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
+                  aria-label="rhoume's pictures"
                   width={500}
                   height={500}
                   quality={100}

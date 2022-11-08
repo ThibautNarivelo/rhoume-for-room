@@ -84,16 +84,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
           <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
             <Zoom>
-              <div>
-                <Image
-                  src={urlFor(design.rhoumeMainDesign).url()}
-                  alt="Rhoume Design"
-                  className="mainPosters -z-10"
-                  width={400}
-                  height={400}
-                  quality={100}
-                />
-              </div>
+              <Image
+                src={urlFor(design.rhoumeMainDesign).url()}
+                alt="Rhoume Design"
+                className="mainPosters -z-10"
+                width={400}
+                height={400}
+                quality={100}
+              />
             </Zoom>
             {isAboutPoster && (
               <Image
