@@ -146,7 +146,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
         </motion.div>
       ))}
-      <div className="text-r-mainwhite pb-32 lg:pb-12 animate-bounce opacity-50">
+      <div className="text-r-mainwhite pb-32 lg:pb-14 animate-bounce opacity-50">
         <ArrowlongDown width={30} height={30} />
       </div>
     </div>
