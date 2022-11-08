@@ -2,13 +2,13 @@ import React, { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AboutInfo, Social } from "../typings";
 import Link from "next/link";
+import PortableText from "react-portable-text";
+import { motion } from "framer-motion";
 import {
   MapPinIcon,
   InboxArrowDownIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
-import PortableText from "react-portable-text";
-import { motion } from "framer-motion";
 
 type Inputs = {
   name: string;

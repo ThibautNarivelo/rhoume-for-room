@@ -65,7 +65,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               className="headerEffect"
               onMouseOver={() => setIsFqaPoster(true)}
               onMouseLeave={() => setIsFqaPoster(false)}
-              href="#contactMe"
+              href="#faq"
             >
               faq
             </a>
