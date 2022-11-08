@@ -25,14 +25,14 @@ export const About: FC<Props> = ({ aboutInfos }) => {
           viewport={{ once: true }}
           className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
         >
-          <div className="text-start hover:blur-sm transition ease-in-out duration-500">
+          <div className="text-start lg:hover:blur-sm transition ease-in-out duration-500">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
               content={aboutInfo.definition}
             />
           </div>
-          <div className="text-end hover:blur-sm transition ease-in-out duration-500">
+          <div className="text-end lg:hover:blur-sm transition ease-in-out duration-500">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
