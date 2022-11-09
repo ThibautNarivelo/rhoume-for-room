@@ -24,7 +24,6 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
       {designs?.map((design) => (
         <div
           key={design._id}
-          viewport={{ once: true }}
           className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-28 xl:px-[30vw]"
         >
           <motion.div
