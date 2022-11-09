@@ -39,6 +39,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               type: "spring",
               duration: 2.8,
             }}
+            viewport={{ once: true }}
             className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
           >
             <motion.a
