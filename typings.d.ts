@@ -36,7 +36,7 @@ rhoumePhotosDesign: Image;
 rhoumeContactDesign: Image;
 rhoumeFaqDesign: Image;
 rhoumeIGDesign: Image;
-contentButton: string;
+imageSEO: Image;
 }
 
 export interface PageInfo extends SanityBody {

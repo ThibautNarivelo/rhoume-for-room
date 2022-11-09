@@ -22,75 +22,103 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex flex-col justify-center items-center">
       {designs?.map((design) => (
-        <motion.div
+        <div
           key={design._id}
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          viewport={{ once: true }}
-          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-40 xl:px-[30vw]"
+          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-28 xl:px-[30vw]"
         >
-          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-5 text-lg text-center xl:text-end text-r-mainwhite transition-all">
-            <a
+          <motion.div
+            initial={{
+              x: 40,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              type: "spring",
+              duration: 2.8,
+            }}
+            className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
+          >
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsAboutPoster(true)}
               onMouseLeave={() => setIsAboutPoster(false)}
               href="#about"
             >
               about
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsPhotosPoster(true)}
               onMouseLeave={() => setIsPhotosPoster(false)}
               href="#images-section"
             >
               photos
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsContactPoster(true)}
               onMouseLeave={() => setIsContactPoster(false)}
               href="#contactMe"
             >
               contact
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsFqaPoster(true)}
               onMouseLeave={() => setIsFqaPoster(false)}
               href="#faq"
             >
               faq
-            </a>
+            </motion.a>
 
             {socials?.map((social) => (
-              <Link
-                className="headerEffect"
-                onMouseOver={() => setIsIGPoster(true)}
-                onMouseLeave={() => setIsIGPoster(false)}
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                transition={{
+                  duration: 0.1,
+                }}
                 key={social._id}
-                href={social.url}
+                className="headerEffect"
               >
-                ig
-              </Link>
+                <Link
+                  onMouseOver={() => setIsIGPoster(true)}
+                  onMouseLeave={() => setIsIGPoster(false)}
+                  href={social.url}
+                >
+                  ig
+                </Link>
+              </motion.div>
             ))}
-          </div>
-          <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
+          </motion.div>
+          <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[80vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
             <Zoom>
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
                 alt="Rhoume Design"
-                className="mainPosters -z-10"
+                className="mainPosters"
                 width={400}
                 height={400}
-                quality={100}
+                quality={90}
+                priority
               />
             </Zoom>
             {isAboutPoster && (
@@ -144,9 +172,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               />
             )}
           </div>
-        </motion.div>
+        </div>
       ))}
-      <div className="text-r-mainwhite pb-32 lg:pb-14 animate-bounce opacity-50">
+      <div className="text-r-mainwhite pb-28 landscape:hidden landscape:md:hidden landscape:lg:block landscape:xl:block landscape:2xl:block lg:pb-14 xl:pb-10 2xl:pb-10 animate-bounce opacity-50">
         <ArrowlongDown width={30} height={30} />
       </div>
     </div>

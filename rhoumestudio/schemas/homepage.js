@@ -72,9 +72,9 @@ export default {
       },
       
       {
-        name: 'contentButton',
-        title: 'Content button',
-        type: 'string',
+        name: 'imageSEO',
+        title: 'Rhoume Image for SEO',
+        type: 'image',
       },
 
    

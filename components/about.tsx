@@ -23,7 +23,7 @@ export const About: FC<Props> = ({ aboutInfos }) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+          className="p-10 flex flex-col leading-snug font-['Lora'] text-sm gap-20 md:text-lg lg:text-xl xl:text-2xl xl:gap-28 2xl:text-3xl"
         >
           <div className="text-start lg:hover:blur-sm transition ease-in-out duration-500">
             <PortableText
@@ -44,5 +44,3 @@ export const About: FC<Props> = ({ aboutInfos }) => {
     </div>
   );
 };
-
-// eslint-disable-next-line import/no-anonymous-default-export

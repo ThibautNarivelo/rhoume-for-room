@@ -3,11 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@-ms-viewport{
+  width: device-width;
+}
+
+:root {
+  background-color: #242424;
+}
+
 * {
   scroll-behavior: smooth;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  height: 100%;
+  width: 100%;
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
@@ -30,12 +45,11 @@ body {
 
 @layer components {
   .header {
-    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] transition-all ease-in-out duration-500;
   }
 
   .mainPosters {
-    @apply z-10  w-[60vw] md:w-[45vw] lg:w-[30vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
-            
+    @apply shadow-lg z-10 landscape:w-[30vw] portrait:w-[60vw] hover:opacity-50 transition-all ease-in-out duration-500
   }
 
 .headerEffect {
@@ -48,7 +62,7 @@ body {
   }
 
   .faqContainer {
-    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
+    @apply w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
   }
 
   .faqTitle {
@@ -56,11 +70,11 @@ body {
   }
 
   .faqBody {
-    @apply text-justify my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[30vw] md:text-justify md:text-base xl:space-y-2;
+    @apply portrait:text-justify landscape:text-center my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[10vw] md:text-center md:text-base xl:space-y-2;
   }
 
   .contactInput {
-    @apply resize-none rounded-md px-2 md:px-6 py-4 
+    @apply resize-none rounded-md px-[.4vw] md:px-6 py-4 
     focus:outline-none ring-0 focus:ring-0 border-none 
     text-r-mainwhite placeholder:px-7 md:placeholder:px-2 placeholder:text-r-mainwhite/50 focus:bg-r-mainwhite/5 transition-colors
   }

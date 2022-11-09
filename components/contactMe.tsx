@@ -42,19 +42,19 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos, socials }) => {
           }}
           viewport={{ once: true }}
           key={aboutInfo._id}
-          className="flex flex-col space-y-10"
+          className="flex flex-col space-y-10 landscape:space-y-4 landscape:md:space-y-[3vw] landscape:lg:space-y-[3vw] landscape:xl:space-y-[2vw] landscape:2xl:space-y-[2vw]"
         >
           <p className="uppercase text-center tracking-[5vw] md:tracking-[3vw] xl:tracking-[3vw] 2xl:tracking-[2.5vw] text-xl hover:blur-sm duration-300">
             {aboutInfo.contactMeTitle}
           </p>
-          <div className="space-y-3 text-lg">
+          <div className="px-2 space-y-3 text-lg landscape:-space-y-20 landscape:invisible landscape:md:invisible landscape:lg:visible landscape:xl:visible landscape:2xl:visible landscape:lg:space-y-[.7vw] landscape:xl:space-y-[1vw] landscape:2xl:space-y-[1vw]">
             <div className="flex items-center space-x-5">
               <MapPinIcon className="text-r-white10 h-7 w-7 animate-pulse" />
-              <p className="text-xl">{aboutInfo.rhoumeLocation}</p>
+              <p>{aboutInfo.rhoumeLocation}</p>
             </div>
             <div className="flex items-center space-x-5">
               <InboxArrowDownIcon className="text-r-white10 h-7 w-7 animate-pulse" />
-              <p className="text-xl">{aboutInfo.rhoumeEmail}</p>
+              <p>{aboutInfo.rhoumeEmail}</p>
             </div>
             {socials?.map((social) => (
               <Link
@@ -105,7 +105,7 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos, socials }) => {
             "
             />
           </form>
-          <div className="z-40 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/70 ease-in-out duration-700 ">
+          <div className="z-40 w-auto select-none absolute left-0 right-0 bottom-3 text-sm text-center text-r-mainblack hover:text-r-mainwhite/70 ease-in-out duration-700 portrait:invisible landscape:invisible landscape:md:invisible portrait:md:visible landscape:lg:invisible portrait:lg:visible landscape:2xl:visible">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}

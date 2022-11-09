@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Helmet } from "react-helmet";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
@@ -12,6 +13,7 @@ import { fetchDesigns } from "../utils/fetchDesigns";
 import { fetchPageInfos } from "../utils/fetchPageInfos";
 import { fetchPosts } from "../utils/fetchPosts";
 import { fetchAboutInfos } from "../utils/fetchAboutInfos";
+import { urlFor } from "../sanity";
 
 interface Props {
   socials: Social[];
@@ -51,36 +53,67 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className=" bg-r-mainblack h-screen snap-y snap-mandatory overflow-scroll scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
-      <Head>
-        <title>Rhoume</title>
-        <meta name="Rhoume" content="Tattoo Artist" lang="en" />
-        <meta name="Rhoume for room" content="Website of Rhoume" />
-        <meta charSet="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, height=device-height,  initial-scale=1.0"
-        />
-        <link rel="icon" href="favicon.ico" />
-      </Head>
+    <div className=" bg-r-mainblack h-100% w-100% snap-mandatory snap-y scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30">
+      {designs?.map((design) => (
+        <Head key={design._id}>
+          <title>Rhoume</title>
+          <meta name="title" content="Rhoume for__room" />
+          <meta name="theme-color" content="#242424" />
+          <link rel="manifest" href="/public/manifest.json" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
 
-      <section id="home" className="snap-center">
+          <meta
+            name="description"
+            content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
+Moriah is an Australian illustrator and tattoo artist based in Paris, France. She gathers inspiration from her dance and choreography background, music, spirituality and nature while exploring the rhythms and patterns of her surroundings."
+          />
+          {/* <!-- Open Graph / Facebook --> */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://rhoume.com/" />
+          <meta property="og:title" content="Rhoume for__room" />
+          <meta
+            property="og:description"
+            content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
+Moriah is an Australian illustrator and tattoo artist based in Paris, France. She gathers inspiration from her dance and choreography background, music, spirituality and nature while exploring the rhythms and patterns of her surroundings."
+          />
+          <meta property="og:image" content={urlFor(design.imageSEO).url()} />
+
+          {/* <!-- Twitter --> */}
+          <meta property="twitter:card" content="Rhoume" />
+          <meta property="twitter:url" content="https://rhoume.com/" />
+          <meta property="twitter:title" content="Rhoume for__room" />
+          <meta
+            property="twitter:description"
+            content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
+Moriah is an Australian illustrator and tattoo artist based in Paris, France. She gathers inspiration from her dance and choreography background, music, spirituality and nature while exploring the rhythms and patterns of her surroundings."
+          />
+          <meta
+            property="twitter:image"
+            content={urlFor(design.imageSEO).url()}
+          />
+          <link rel="icon" href="favicon.ico" />
+        </Head>
+      ))}
+
+      <section id="home" className="snap-start">
         <Masthome designs={designs} socials={socials} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about" className="snap-start">
         <About aboutInfos={aboutInfos} />
       </section>
 
-      <section id="images-section" className="snap-center">
+      <section id="images-section" className="snap-start">
         <ImagesSection posts={posts} />
       </section>
 
-      <section id="contactMe" className="snap-center">
+      <section id="contactMe" className="snap-start">
         <ContactMe aboutInfos={aboutInfos} socials={socials} />
       </section>
 
-      <section id="faq" className="snap-center">
+      <section id="faq" className="snap-start">
         <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
       </section>
     </div>
