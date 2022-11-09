@@ -45,8 +45,7 @@ body {
   }
 
   .mainPosters {
-    @apply z-10  w-[60vw] md:w-[45vw] lg:w-[30vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
-            landscape:w-[30vw]
+    @apply z-10 portrait:h-[80vw] portrait:w-[60vw] landscape:h-[30vw] landscape:w-[20vw] portrait:md:w-[20vw] landscape:lg:h-[40vw] landscape:lg:w-[32vw] landscape:xl:w-[30vw] landscape:2xl:w-[30vw] hover:opacity-50 ease-in-out duration-500
   }
 
 .headerEffect {

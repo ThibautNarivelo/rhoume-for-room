@@ -42,12 +42,12 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos, socials }) => {
           }}
           viewport={{ once: true }}
           key={aboutInfo._id}
-          className="flex flex-col space-y-10 landscape:space-y-4 landscape:lg:space-y-[5vw]"
+          className="flex flex-col space-y-10 landscape:space-y-4 landscape:md:space-y-[3vw] landscape:lg:space-y-[3vw] landscape:xl:space-y-[2vw] landscape:2xl:space-y-[2vw]"
         >
           <p className="uppercase text-center tracking-[5vw] md:tracking-[3vw] xl:tracking-[3vw] 2xl:tracking-[2.5vw] text-xl hover:blur-sm duration-300">
             {aboutInfo.contactMeTitle}
           </p>
-          <div className="px-2 space-y-3 text-lg landscape:-space-y-20 landscape:invisible landscape:md:invisible landscape:lg:visible landscape:xl:visible landscape:lg:space-y-[1vw]">
+          <div className="px-2 space-y-3 text-lg landscape:-space-y-20 landscape:invisible landscape:md:invisible landscape:lg:visible landscape:xl:visible landscape:2xl:visible landscape:lg:space-y-[.7vw] landscape:xl:space-y-[1vw] landscape:2xl:space-y-[1vw]">
             <div className="flex items-center space-x-5">
               <MapPinIcon className="text-r-white10 h-7 w-7 animate-pulse" />
               <p>{aboutInfo.rhoumeLocation}</p>
