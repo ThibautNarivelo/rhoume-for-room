@@ -57,7 +57,10 @@ const Home: FC<Props> = ({
         <meta name="Rhoume" content="Tattoo Artist" lang="en" />
         <meta name="Rhoume for room" content="Website of Rhoume" />
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height,  initial-scale=1.0"
+        />
         <link rel="icon" href="favicon.ico" />
       </Head>
 
