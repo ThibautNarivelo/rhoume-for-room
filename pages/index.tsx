@@ -53,19 +53,17 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className=" bg-r-mainblack h-screen w-screen scroll-smooth snap-y snap-mandatory scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
+    <div className=" bg-r-mainblack h-100% w-100% scroll-smooth snap-y snap-mandatory scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
       {designs?.map((design) => (
         <Head key={design._id}>
-          {/* <Helmet> */}
           <title>Rhoume</title>
-          <meta
-            name="viewport"
-            content="height=device-height, initial-scale=1"
-          />
+          <meta name="title" content="Rhoume for__room" />
+          <link rel="manifest" href="/public/manifest.json" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#242424" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="title" content="Rhoume for__room" />
+
           <meta
             name="description"
             content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
@@ -96,7 +94,6 @@ Moriah is an Australian illustrator and tattoo artist based in Paris, France. Sh
             content={urlFor(design.imageSEO).url()}
           />
           <link rel="icon" href="favicon.ico" />
-          {/* </Helmet> */}
         </Head>
       ))}
 
