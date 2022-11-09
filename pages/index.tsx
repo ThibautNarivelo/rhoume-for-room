@@ -58,7 +58,6 @@ const Home: FC<Props> = ({
         <Head key={design._id}>
           {/* <Helmet> */}
           <title>Rhoume</title>
-          <html lang="eng" />
           <meta name="title" content="Rhoume for__room" />
           <meta
             name="description"
