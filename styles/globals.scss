@@ -5,20 +5,22 @@
 
 @-ms-viewport{
   width: device-width;
+  background-color: #242424;
 }
 
 * {
   scroll-behavior: smooth;
+  background-color: #242424
 }
 
-// html {
-//   height: 100%;
-//   width: 100%;
-// }
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
-  // height: 100%;
-  // width: 100%;
+  height: 100%;
+  width: 100%;
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
