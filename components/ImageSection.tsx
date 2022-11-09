@@ -12,13 +12,16 @@ type Props = {
 export const ImagesSection: FC<Props> = ({ posts }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center place-items-center">
-      <div className="scroll-smooth rounded-lg landscape:w-[100vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[100vw] lg:h-[40vw] lg:w-[100vw] xl:w-[100vw] xl:h-[50vw] 2xl:h-[25vw] 2xl:w-[90vw] carousel mx-10">
+      <div className="scroll-smooth rounded-lg  carousel mx-10">
         {posts.map((post) => (
-          <div key={post._id} className="carousel-item cursor-pointer">
+          <div
+            key={post._id}
+            className="carousel-item cursor-pointer portait:w-full portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[32vw] portrait:md:w-[75vw] portrait:md:h-[100vw] "
+          >
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg landscape:w-[21vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[30vw] lg:h-[40vw] lg:w-[30vw] xl:h-[50vw] xl:w-[35vw] 2xl:w-[20vw] 2xl:h-[25vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
+                  className="rounded-lg portrait:w-[80vw] portrait:h-[100vw] landscape:w-[40vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[30vw] portrait:md:w-[70vw] portrait:md:h-[100vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"
