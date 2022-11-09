@@ -82,7 +82,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center portrait:-space-x-[60vw] landscape:-space-x-[20vw] portrait:md:-space-x-[20w] landscape:lg:-space-x-[30vw] landscape:xl:-space-x-[30vw] 2xl:-space-x-[30vw] items-center w-screen h-screen">
+          <div className="flex justify-center portrait:-space-x-[60vw] landscape:-space-x-[20vw] portrait:md:-space-x-[20w] landscape:lg:-space-x-[30vw] landscape:xl:-space-x-[30vw] landscape:2xl:-space-x-[30vw] items-center w-screen h-screen">
             <Zoom>
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
