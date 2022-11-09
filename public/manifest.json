@@ -19,7 +19,7 @@
       }
     ],
     "start_url": "rhoume.com",
-    "display": "standalone",
+    "display": "fullscreen",
     "theme_color": "#eeebdc",
     "background_color": "#242424",
     "lang": "eng",
