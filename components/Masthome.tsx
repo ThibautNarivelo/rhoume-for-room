@@ -87,10 +87,11 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
                 alt="Rhoume Design"
-                className="mainPosters -z-10"
+                className="mainPosters"
                 width={400}
                 height={400}
-                quality={100}
+                quality={90}
+                priority
               />
             </Zoom>
             {isAboutPoster && (

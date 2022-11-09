@@ -57,6 +57,7 @@ const Home: FC<Props> = ({
         <Head key={design._id}>
           <title>Rhoume</title>
           <meta name="title" content="Rhoume for__room" />
+          <meta lang="en" />
           <meta
             name="description"
             content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
