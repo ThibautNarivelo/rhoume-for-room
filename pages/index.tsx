@@ -58,9 +58,9 @@ const Home: FC<Props> = ({
         <Head key={design._id}>
           <title>Rhoume</title>
           <meta name="title" content="Rhoume for__room" />
+          <meta name="theme-color" content="#242424" />
           <link rel="manifest" href="/public/manifest.json" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#242424" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
 

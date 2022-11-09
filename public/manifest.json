@@ -1,6 +1,12 @@
 {
     "short_name": "Rhoume",
     "name": "Rhoume for__room",
+    "start_url": "rhoume.com",
+    "display": "fullscreen",
+    "theme_color": "#eeebdc",
+    "background_color": "#242424",
+    "lang": "eng",
+    "orientation": "portrait-primary",
     "icons": [
       {
         "src": "favicon.ico",
@@ -17,11 +23,5 @@
         "type": "image/png",
         "sizes": "512x512"
       }
-    ],
-    "start_url": "rhoume.com",
-    "display": "fullscreen",
-    "theme_color": "#eeebdc",
-    "background_color": "#242424",
-    "lang": "eng",
-    "orientation": "portrait-primary"
+    ]
   }
