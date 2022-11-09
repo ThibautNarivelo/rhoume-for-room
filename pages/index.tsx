@@ -58,6 +58,11 @@ const Home: FC<Props> = ({
         <Head key={design._id}>
           {/* <Helmet> */}
           <title>Rhoume</title>
+          <meta
+            name="viewport"
+            content="height=device-height, initial-scale=1"
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="title" content="Rhoume for__room" />
           <meta
             name="description"
