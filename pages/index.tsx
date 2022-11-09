@@ -53,7 +53,7 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className=" bg-r-mainblack h-screen w-screen  snap-mandatory snap-y scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30">
+    <div className=" bg-r-mainblack h-100% w-100% snap-mandatory snap-y scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30">
       {designs?.map((design) => (
         <Head key={design._id}>
           <title>Rhoume</title>
