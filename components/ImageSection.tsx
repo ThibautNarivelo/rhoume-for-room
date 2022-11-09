@@ -12,7 +12,7 @@ type Props = {
 export const ImagesSection: FC<Props> = ({ posts }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center place-items-center">
-      <div className="rounded-lg h-auto w-[75vw] md:w-[57vw] lg:w-[90vw] xl:w-[90vw] carousel mx-10">
+      <div className="scroll-smooth rounded-lg h-auto w-[75vw] md:w-[57vw] lg:w-[90vw] xl:w-[90vw] carousel mx-10">
         {posts.map((post) => (
           <div key={post._id} className="carousel-item cursor-pointer">
             {post.image && (
