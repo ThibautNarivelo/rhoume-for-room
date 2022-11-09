@@ -36,52 +36,89 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           viewport={{ once: true }}
           className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-28 xl:px-[30vw]"
         >
-          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all">
-            <a
+          <motion.div
+            initial={{
+              x: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{
+              type: "spring",
+              duration: 1,
+            }}
+            className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
+          >
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsAboutPoster(true)}
               onMouseLeave={() => setIsAboutPoster(false)}
               href="#about"
             >
               about
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsPhotosPoster(true)}
               onMouseLeave={() => setIsPhotosPoster(false)}
               href="#images-section"
             >
               photos
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsContactPoster(true)}
               onMouseLeave={() => setIsContactPoster(false)}
               href="#contactMe"
             >
               contact
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
               className="headerEffect"
               onMouseOver={() => setIsFqaPoster(true)}
               onMouseLeave={() => setIsFqaPoster(false)}
               href="#faq"
             >
               faq
-            </a>
+            </motion.a>
 
             {socials?.map((social) => (
-              <Link
-                className="headerEffect"
-                onMouseOver={() => setIsIGPoster(true)}
-                onMouseLeave={() => setIsIGPoster(false)}
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                transition={{
+                  duration: 0.1,
+                }}
                 key={social._id}
-                href={social.url}
+                className="headerEffect"
               >
-                ig
-              </Link>
+                <Link
+                  onMouseOver={() => setIsIGPoster(true)}
+                  onMouseLeave={() => setIsIGPoster(false)}
+                  href={social.url}
+                >
+                  ig
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[80vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
             <Zoom>
               <Image

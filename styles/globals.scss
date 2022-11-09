@@ -9,8 +9,6 @@
 
 :root {
   background-color: #242424;
-  width: device-width;
-  height: device-height;
 }
 
 * {
@@ -51,7 +49,7 @@ body {
   }
 
   .mainPosters {
-    @apply shadow-lg z-10 landscape:w-[30vw] portrait:w-[80vw] hover:opacity-50 transition-all ease-in-out duration-500
+    @apply shadow-lg z-10 landscape:w-[30vw] portrait:w-[60vw] hover:opacity-50 transition-all ease-in-out duration-500
   }
 
 .headerEffect {
