@@ -20,7 +20,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   const [isIGPoster, setIsIGPoster] = useState(false);
 
   return (
-    <div className="bg-r-mainblack h flex flex-col justify-center items-center">
+    <div className="bg-r-mainblack h-screen w-screen flex flex-col justify-center items-center">
       {designs?.map((design) => (
         <motion.div
           key={design._id}
@@ -147,7 +147,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
         </motion.div>
       ))}
-      <div className="text-r-mainwhite pb-[70vw] landscape:hidden landscape:md:hidden landscape:lg:block lg:pb-14 animate-bounce opacity-50">
+      <div className="text-r-mainwhite pb-28 landscape:hidden landscape:md:hidden landscape:lg:block landscape:xl:block landscape:2xl:block lg:pb-14 xl:pb-10 2xl:pb-10 animate-bounce opacity-50">
         <ArrowlongDown width={30} height={30} />
       </div>
     </div>
