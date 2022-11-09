@@ -20,7 +20,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   const [isIGPoster, setIsIGPoster] = useState(false);
 
   return (
-    <div className="bg-r-mainblack h-screen w-screen flex flex-col justify-center items-center landscape:flex-row">
+    <div className="bg-r-mainblack flex flex-col justify-center items-center">
       {designs?.map((design) => (
         <motion.div
           key={design._id}
@@ -34,9 +34,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-40 xl:px-[30vw] landscape:flex-row"
+          className="h-screen w-screen flex flex-col  xl:flex-row items-center justify-center p-40 xl:px-[30vw]"
         >
-          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-5 text-lg text-center xl:text-end text-r-mainwhite transition-all landscape:flex-col">
+          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all">
             <a
               className="headerEffect"
               onMouseOver={() => setIsAboutPoster(true)}
@@ -82,7 +82,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               </Link>
             ))}
           </div>
-          <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen landscape:-space-x-[30vw]">
+          <div className="flex justify-center -space-x-[60vw] md:-space-x-[45vw] lg:-space-x-[30vw] xl:-space-x-[30vw] 2xl:-space-x-[25vw] items-center w-screen h-screen">
             <Zoom>
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
@@ -147,7 +147,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
         </motion.div>
       ))}
-      <div className="text-r-mainwhite pb-32 lg:pb-14 animate-bounce opacity-50">
+      <div className="text-r-mainwhite pb-16 landscape:hidden landscape:md:hidden landscape:lg:block lg:pb-14 animate-bounce opacity-50">
         <ArrowlongDown width={30} height={30} />
       </div>
     </div>

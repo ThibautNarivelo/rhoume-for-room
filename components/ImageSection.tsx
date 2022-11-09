@@ -12,13 +12,13 @@ type Props = {
 export const ImagesSection: FC<Props> = ({ posts }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex justify-center items-center place-items-center">
-      <div className="scroll-smooth rounded-lg h-auto w-[75vw] md:w-[57vw] lg:w-[90vw] xl:w-[90vw] carousel mx-10 landscape:h-[40vw] landscape:w-[100vw]">
+      <div className="scroll-smooth rounded-lg landscape:w-[100vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[100vw] lg:h-[40vw] lg:w-[100vw] xl:w-[100vw] xl:h-[50vw] 2xl:h-[25vw] 2xl:w-[90vw] carousel mx-10">
         {posts.map((post) => (
           <div key={post._id} className="carousel-item cursor-pointer">
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg h-[110vw] md:h-[85vw] lg:h-[45vw] xl:h-[25vw] w-[75vw] md:w-[57vw] lg:w-[30vw] xl:w-[20vw] mx-1 opacity-80 hover:opacity-100 transition-opacity landscape:h-[40vw] landscape:w-[28vw]"
+                  className="rounded-lg landscape:w-[25vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[30vw] lg:h-[40vw] lg:w-[30vw] xl:h-[50vw] xl:w-[35vw] 2xl:w-[20vw] 2xl:h-[25vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"

@@ -53,7 +53,7 @@ const Home: FC<Props> = ({
   aboutInfos,
 }: Props) => {
   return (
-    <div className=" bg-r-mainblack h-screen w-screen snap-y snap-mandatory scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30">
+    <div className=" bg-r-mainblack h-100% w-100vh snap-mandatory snap-y scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30">
       {designs?.map((design) => (
         <Head key={design._id}>
           <title>Rhoume</title>
@@ -101,19 +101,19 @@ Moriah is an Australian illustrator and tattoo artist based in Paris, France. Sh
         <Masthome designs={designs} socials={socials} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about" className="snap-start">
         <About aboutInfos={aboutInfos} />
       </section>
 
-      <section id="images-section" className="snap-center">
+      <section id="images-section" className="snap-start">
         <ImagesSection posts={posts} />
       </section>
 
-      <section id="contactMe" className="snap-center">
+      <section id="contactMe" className="snap-start">
         <ContactMe aboutInfos={aboutInfos} socials={socials} />
       </section>
 
-      <section id="faq" className="snap-center">
+      <section id="faq" className="snap-start">
         <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
       </section>
     </div>

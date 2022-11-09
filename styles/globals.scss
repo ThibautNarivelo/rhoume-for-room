@@ -11,14 +11,14 @@
   scroll-behavior: smooth;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-}
+// html {
+//   height: 100%;
+//   width: 100%;
+// }
 
 body {
-  height: 100%;
-  width: 100%;
+  // height: 100%;
+  // width: 100%;
   font-family: "Open Sans", "Charter", sans-serif;
 }
 
@@ -59,7 +59,7 @@ body {
   }
 
   .faqContainer {
-    @apply snap-start w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
+    @apply w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
   }
 
   .faqTitle {
@@ -67,12 +67,11 @@ body {
   }
 
   .faqBody {
-    @apply text-justify my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[30vw] md:text-justify md:text-base xl:space-y-2
-    landscape:px-[4vw] landscape:text-center;
+    @apply portrait:text-justify landscape:text-center my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[10vw] md:text-center md:text-base xl:space-y-2;
   }
 
   .contactInput {
-    @apply resize-none rounded-md px-2 md:px-6 py-4 
+    @apply resize-none rounded-md px-[.4vw] md:px-6 py-4 
     focus:outline-none ring-0 focus:ring-0 border-none 
     text-r-mainwhite placeholder:px-7 md:placeholder:px-2 placeholder:text-r-mainwhite/50 focus:bg-r-mainwhite/5 transition-colors
   }
