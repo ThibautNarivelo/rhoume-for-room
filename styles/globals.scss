@@ -10,6 +10,7 @@
 * {
   scroll-behavior: smooth;
 }
+
 html {
   height: 100%;
   width: 100%;
@@ -45,7 +46,7 @@ body {
 
   .mainPosters {
     @apply z-10  w-[60vw] md:w-[45vw] lg:w-[30vw] xl:w-[30vw] 2xl:w-[25vw] hover:opacity-50 ease-in-out duration-500
-            
+            landscape:w-[30vw]
   }
 
 .headerEffect {
@@ -66,7 +67,8 @@ body {
   }
 
   .faqBody {
-    @apply text-justify my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[30vw] md:text-justify md:text-base xl:space-y-2;
+    @apply text-justify my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[30vw] md:text-justify md:text-base xl:space-y-2
+    landscape:px-[4vw] landscape:text-center;
   }
 
   .contactInput {

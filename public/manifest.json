@@ -21,5 +21,7 @@
     "start_url": "rhoume.com",
     "display": "standalone",
     "theme_color": "#eeebdc",
-    "background_color": "#242424"
+    "background_color": "#242424",
+    "lang": "eng",
+    "orientation": "portrait-primary"
   }

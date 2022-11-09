@@ -23,7 +23,7 @@ export const About: FC<Props> = ({ aboutInfos }) => {
             duration: 1,
           }}
           viewport={{ once: true }}
-          className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+          className="p-10 gap-40 flex flex-col leading-snug font-['Lora'] text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl landscape:gap-14 landscape:md:text-md"
         >
           <div className="text-start lg:hover:blur-sm transition ease-in-out duration-500">
             <PortableText

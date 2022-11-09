@@ -42,19 +42,19 @@ export const ContactMe: FC<ContactMeProps> = ({ aboutInfos, socials }) => {
           }}
           viewport={{ once: true }}
           key={aboutInfo._id}
-          className="flex flex-col space-y-10"
+          className="flex flex-col space-y-10 landscape:space-y-5"
         >
           <p className="uppercase text-center tracking-[5vw] md:tracking-[3vw] xl:tracking-[3vw] 2xl:tracking-[2.5vw] text-xl hover:blur-sm duration-300">
             {aboutInfo.contactMeTitle}
           </p>
-          <div className="space-y-3 text-lg">
+          <div className="space-y-3 text-lg landscape:-space-y-20 landscape:invisible landscape:lg:visible landscape:lg:space-y-2">
             <div className="flex items-center space-x-5">
               <MapPinIcon className="text-r-white10 h-7 w-7 animate-pulse" />
-              <p className="text-xl">{aboutInfo.rhoumeLocation}</p>
+              <p>{aboutInfo.rhoumeLocation}</p>
             </div>
             <div className="flex items-center space-x-5">
               <InboxArrowDownIcon className="text-r-white10 h-7 w-7 animate-pulse" />
-              <p className="text-xl">{aboutInfo.rhoumeEmail}</p>
+              <p>{aboutInfo.rhoumeEmail}</p>
             </div>
             {socials?.map((social) => (
               <Link
