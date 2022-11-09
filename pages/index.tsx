@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Helmet } from "react-helmet";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
@@ -55,9 +56,10 @@ const Home: FC<Props> = ({
     <div className=" bg-r-mainblack h-screen w-screen scroll-smooth snap-y snap-mandatory scrollbar-thin scrollbar-track-r-mainblack/50 scrollbar-thumb-r-mainwhite/30 ">
       {designs?.map((design) => (
         <Head key={design._id}>
+          {/* <Helmet> */}
           <title>Rhoume</title>
+          <html lang="eng" />
           <meta name="title" content="Rhoume for__room" />
-          <html lang="en" />
           <meta
             name="description"
             content="Rhoume is a welcoming, intimate and ever-evolving creative space curated by Moriah Georges.
@@ -88,6 +90,7 @@ Moriah is an Australian illustrator and tattoo artist based in Paris, France. Sh
             content={urlFor(design.imageSEO).url()}
           />
           <link rel="icon" href="favicon.ico" />
+          {/* </Helmet> */}
         </Head>
       ))}
 
