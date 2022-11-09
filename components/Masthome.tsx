@@ -22,23 +22,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
   return (
     <div className="bg-r-mainblack h-screen w-screen flex flex-col justify-center items-center">
       {designs?.map((design) => (
-        <motion.div
+        <div
           key={design._id}
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{
-            duration: 1,
-          }}
           viewport={{ once: true }}
           className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-28 xl:px-[30vw]"
         >
           <motion.div
             initial={{
-              x: 100,
+              x: 40,
               opacity: 0,
             }}
             whileInView={{
@@ -47,7 +38,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             }}
             transition={{
               type: "spring",
-              duration: 1,
+              duration: 2.8,
             }}
             className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
           >
@@ -182,7 +173,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               />
             )}
           </div>
-        </motion.div>
+        </div>
       ))}
       <div className="text-r-mainwhite pb-28 landscape:hidden landscape:md:hidden landscape:lg:block landscape:xl:block landscape:2xl:block lg:pb-14 xl:pb-10 2xl:pb-10 animate-bounce opacity-50">
         <ArrowlongDown width={30} height={30} />
