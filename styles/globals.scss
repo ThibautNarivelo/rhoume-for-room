@@ -41,11 +41,11 @@ body {
 
 @layer components {
   .header {
-    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] ease-in-out duration-500;
+    @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] transition-all ease-in-out duration-500;
   }
 
   .mainPosters {
-    @apply z-10 portrait:h-[80vw] portrait:w-[60vw] landscape:h-[30vw] landscape:w-[20vw] portrait:md:w-[60vw] landscape:lg:h-[40vw] landscape:lg:w-[30vw] landscape:xl:w-[30vw] landscape:2xl:w-[30vw] hover:opacity-50 ease-in-out duration-500
+    @apply shadow-lg z-10 landscape:w-[30vw] portrait:w-[80vw] hover:opacity-50 transition-all ease-in-out duration-500
   }
 
 .headerEffect {

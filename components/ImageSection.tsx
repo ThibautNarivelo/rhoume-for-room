@@ -18,7 +18,7 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg landscape:w-[23vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[30vw] lg:h-[40vw] lg:w-[30vw] xl:h-[50vw] xl:w-[35vw] 2xl:w-[20vw] 2xl:h-[25vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
+                  className="rounded-lg landscape:w-[21vw] landscape:h-[35vw] portrait:h-[100vw] portrait:w-[70vw] md:h-[40vw] md:w-[30vw] lg:h-[40vw] lg:w-[30vw] xl:h-[50vw] xl:w-[35vw] 2xl:w-[20vw] 2xl:h-[25vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"
