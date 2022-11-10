@@ -28,16 +28,15 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
         >
           <motion.div
             initial={{
-              x: 40,
               opacity: 0,
             }}
             whileInView={{
-              x: 0,
               opacity: 1,
             }}
             transition={{
-              type: "spring",
-              duration: 2.8,
+              delay: 0.5,
+              duration: 2,
+              default: { ease: "linear" },
             }}
             viewport={{ once: true }}
             className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
@@ -110,7 +109,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               </motion.div>
             ))}
           </motion.div>
-          <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[80vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
+          <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[60vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
             <Zoom>
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
@@ -118,7 +117,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 className="mainPosters"
                 width={400}
                 height={400}
-                quality={90}
+                quality={100}
                 priority
               />
             </Zoom>
