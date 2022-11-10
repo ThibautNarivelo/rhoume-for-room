@@ -3,7 +3,6 @@ import { AboutInfo, PageInfo } from "../typings";
 import { motion } from "framer-motion";
 import PortableText from "react-portable-text";
 import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
 
 type Props = {
   pageInfos: PageInfo[];
@@ -25,11 +24,6 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
 
                 <Disclosure.Button className="faqTitle">
                   {pageInfo.appointmentsTitle}
-                  {/* <ChevronUpIcon
-                    className={`${
-                      open ? "rotate-180 transform" : ""
-                    } h-5 w-5 text-r-mainblack animate-pulse`}
-                  /> */}
                 </Disclosure.Button>
                 <Disclosure.Panel className="faqBody">
                   <motion.div
@@ -62,11 +56,6 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               <>
                 <Disclosure.Button className="faqTitle">
                   {pageInfo.bookingsTitle}
-                  {/* <ChevronUpIcon
-                    className={`${
-                      open ? "rotate-180 transform" : ""
-                    } h-5 w-5 text-r-mainblack animate-pulse`}
-                  /> */}
                 </Disclosure.Button>
                 <Disclosure.Panel className="faqBody">
                   <motion.div
@@ -99,11 +88,6 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               <>
                 <Disclosure.Button className="faqTitle">
                   {pageInfo.beforeCareTitle}
-                  {/* <ChevronUpIcon
-                    className={`${
-                      open ? "rotate-180 transform" : ""
-                    } h-5 w-5 text-r-mainblack animate-pulse`}
-                  /> */}
                 </Disclosure.Button>
                 <Disclosure.Panel className="faqBody">
                   <motion.div
@@ -136,11 +120,6 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
               <>
                 <Disclosure.Button className="faqTitle">
                   {pageInfo.afterCareTitle}
-                  {/* <ChevronUpIcon
-                    className={`${
-                      open ? "rotate-180 transform" : ""
-                    } h-5 w-5 text-r-mainblack animate-pulse`}
-                  /> */}
                 </Disclosure.Button>
                 <Disclosure.Panel className="faqBody">
                   <motion.div
