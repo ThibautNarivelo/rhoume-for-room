@@ -16,7 +16,7 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         {posts.map((post) => (
           <div
             key={post._id}
-            className="carousel-item cursor-pointer portait:w-full portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[32vw] portrait:md:w-[75vw] portrait:md:h-[100vw] "
+            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[31vw] portrait:md:w-[75vw] portrait:md:h-[110vw] "
           >
             {post.image && (
               <Zoom>
