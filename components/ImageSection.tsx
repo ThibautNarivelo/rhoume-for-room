@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { Post } from "../typings";
 import { urlFor } from "../sanity";
 import Image from "next/image";
@@ -16,12 +16,12 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         {posts.map((post) => (
           <div
             key={post._id}
-            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[31vw] portrait:md:w-[75vw] portrait:md:h-[110vw] "
+            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[39vw] landscape:md:w-[29vw] portrait:md:w-[92vw] portrait:md:h-[120vw] lg:w-[43vw] lg:h-[55vw] xl:w-[31vw] xl:h-[40vw]"
           >
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg portrait:w-[80vw] portrait:h-[100vw] landscape:w-[40vw] landscape:h-[50vw] landscape:md:h-[40vw] landscape:md:w-[30vw] portrait:md:w-[70vw] portrait:md:h-[100vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
+                  className="rounded-lg portrait:w-[80vw] portrait:h-[100vw] landscape:w-[40vw] landscape:h-[50vw] landscape:md:h-[39vw] landscape:md:w-[28vw] portrait:md:w-[90vw] portrait:md:h-[120vw] lg:w-[42vw] lg:h-[55vw] xl:w-[30vw] xl:h-[40vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"

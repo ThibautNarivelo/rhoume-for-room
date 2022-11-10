@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { Helmet } from "react-helmet";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { Post, Social, PageInfo, Design, AboutInfo } from "../typings";
@@ -59,7 +58,8 @@ const Home: FC<Props> = ({
           <title>Rhoume</title>
           <meta name="title" content="Rhoume for__room" />
           <meta name="theme-color" content="#242424" />
-          <link rel="manifest" href="/public/manifest.json" />
+          <link rel="apple-touch-icon" href="%PUBLIC_URL%/m.png" />
+          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
@@ -109,12 +109,12 @@ Moriah is an Australian illustrator and tattoo artist based in Paris, France. Sh
         <ImagesSection posts={posts} />
       </section>
 
-      <section id="contactMe" className="snap-start">
-        <ContactMe aboutInfos={aboutInfos} socials={socials} />
-      </section>
-
       <section id="faq" className="snap-start">
         <Faq pageInfos={pageInfos} aboutInfos={aboutInfos} />
+      </section>
+
+      <section id="contactMe" className="snap-start">
+        <ContactMe aboutInfos={aboutInfos} socials={socials} />
       </section>
     </div>
   );
