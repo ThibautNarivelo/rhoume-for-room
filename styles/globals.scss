@@ -62,7 +62,7 @@ body {
   }
 
   .faqTitle {
-    @apply flex cursor-pointer w-full shadow-md justify-center items-center px-5 uppercase tracking-[2vw] lg:tracking-[1vw] rounded-full bg-r-mainwhite/90 py-3 lg:py-5 text-center text-sm lg:text-base text-r-mainblack hover:text-r-mainwhite hover:bg-r-mainblack ease-in-out duration-300;
+    @apply flex cursor-pointer w-full items-center justify-center shadow-md px-5 uppercase tracking-[2vw] lg:tracking-[1vw] rounded-full bg-r-mainwhite/90 py-3 lg:py-5 text-center text-sm lg:text-base text-r-mainblack hover:text-r-mainwhite hover:bg-r-mainblack ease-in-out duration-300;
   }
 
   .faqBody {

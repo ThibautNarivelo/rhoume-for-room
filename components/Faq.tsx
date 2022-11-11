@@ -15,7 +15,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
       {pageInfos?.map((pageInfo) => (
         <div
           key={pageInfo._id}
-          className="w-screen h-screen p-[10vw] space-y-2 lg:space-y-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-r-mainwhite/20"
+          className="w-[95vw] h-screen space-y-2 lg:space-y-5 py-10 pl-10 md:pl-14 lg:pl-20 pr-3 overflow-y-scroll scrollbar-thin scrollbar-thumb-r-mainwhite/20"
         >
           <Disclosure>
             {({ open }) => (
