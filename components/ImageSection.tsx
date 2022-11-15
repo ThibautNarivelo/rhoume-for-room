@@ -39,12 +39,12 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         {posts.map((post) => (
           <div
             key={post._id}
-            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[100vw] landscape:w-[42vw] landscape:h-[50vw] landscape:md:h-[39vw] landscape:md:w-[29vw] portrait:md:w-[92vw] portrait:md:h-[120vw] portrait:lg:w-[43vw] portait:lg:h-[55vw] xl:w-[31vw] xl:h-[40vw] 2xl:w-[30vw] 2xl:h-[40vw]"
+            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[105vw] landscape:w-[31vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[29vw] portrait:md:w-[64vw] portrait:md:h-[80vw] landscape:lg:w-[30vw] landscape:lg:h-[40vw] portrait:lg:w-[43vw] portait:lg:h-[55vw] xl:w-[31.5vw] xl:h-[40vw] 2xl:w-[31vw] 2xl:h-[40vw]"
           >
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg portrait:w-[80vw] portrait:h-[100vw] landscape:w-[40vw] landscape:h-[50vw] landscape:md:h-[39vw] landscape:md:w-[28vw] portrait:md:w-[90vw] portrait:md:h-[120vw] portait:lg:w-[42vw] portait:lg:h-[55vw] xl:w-[30vw] xl:h-[40vw] 2xl:w-[32vw] 2xl:h-[40vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
+                  className="rounded-lg portrait:w-[80vw] portrait:h-[105vw] landscape:w-[30vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[28vw] portrait:md:w-[63vw] portrait:md:h-[80vw] portait:lg:w-[42vw] portait:lg:h-[55vw] landscape:lg:w-[29vw] landscape:lg:h-[40vw] xl:w-[29.5vw] xl:h-[40vw] 2xl:w-[30vw] 2xl:h-[40vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"
@@ -58,21 +58,18 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         ))}
       </div>
       <motion.div
-        // initial={{
-        //   opacity: 1,
-        // }}
-        // whileInView={{
-        //   opacity: 0,
-        // }}
-        // transition={{
-        //   duration: 3,
-        // }}
+        initial={{
+          opacity: 1,
+        }}
+        whileInView={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 3,
+        }}
         className="text-r-mainwhite/50 absolute rounded-full h-auto w-[5vw] md:w-[3vw] lg:w-[2vw] xl:w-[2vw] 2xl:w-[2vw] animate-pulse right-2"
       >
-        <ArrowRightIcon
-        // className="scrollTop text-red-500 bg-white h-20 w-20"
-        // onClick={scrollRight}
-        />
+        <ArrowRightIcon />
         {/* <span>scroll to right</span> */}
       </motion.div>
     </div>

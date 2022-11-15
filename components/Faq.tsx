@@ -3,6 +3,7 @@ import { AboutInfo, PageInfo } from "../typings";
 import { motion } from "framer-motion";
 import PortableText from "react-portable-text";
 import { Disclosure } from "@headlessui/react";
+import ArrowlongDown from "@heroicons/react/24/outline/ArrowLongDownIcon";
 
 type Props = {
   pageInfos: PageInfo[];
@@ -11,11 +12,11 @@ type Props = {
 
 export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
   return (
-    <div className="h-screen w-screen bg-r-mainblack justify-center items-center scroll-smooth">
+    <div className="h-screen w-screen bg-r-mainblack flex flex-col justify-center items-center scroll-smooth">
       {pageInfos?.map((pageInfo) => (
         <div
           key={pageInfo._id}
-          className="w-[95vw] h-screen space-y-2 lg:space-y-5 py-10 pl-10 md:pl-14 lg:pl-20 pr-3 overflow-y-scroll scrollbar-thin scrollbar-thumb-r-mainwhite/20"
+          className="w-[90vw] h-screen space-y-2 lg:space-y-5 px-6 py-20 overflow-y-scroll scrollbar-thin scrollbar-thumb-r-mainwhite/20"
         >
           <Disclosure>
             {({ open }) => (
@@ -146,6 +147,20 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
           </Disclosure>
         </div>
       ))}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+        }}
+        className="text-r-mainwhite h-[25vw] w-10 p-2 mt-4 flex flex-col items-center justify-center animate-bounce opacity-50 landscape:invisible landscape:md:invisible"
+      >
+        <ArrowlongDown width={30} height={30} />
+      </motion.div>
     </div>
   );
 };
