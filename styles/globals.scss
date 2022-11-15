@@ -61,16 +61,12 @@ body {
     @apply hover:cursor-default hover:blur-sm ease-in-out duration-700;
   }
 
-  .faqContainer {
-    @apply w-screen h-auto text-r-mainwhite p-5 flex flex-col justify-center items-center pt-16 cursor-default;
-  }
-
   .faqTitle {
-    @apply uppercase w-auto h-auto text-xl tracking-[3vw] md:tracking-[4vw] hover:blur-sm ease-in-out duration-500;
+    @apply flex cursor-pointer w-full items-center justify-center shadow-md px-5 uppercase tracking-[2vw] lg:tracking-[1vw] rounded-full bg-r-mainwhite/90 py-3 lg:py-5 text-center text-sm lg:text-base text-r-mainblack hover:text-r-mainwhite hover:bg-r-mainblack ease-in-out duration-300;
   }
 
   .faqBody {
-    @apply portrait:text-justify landscape:text-center my-[2vw] space-y-1 text-sm w-auto h-auto px-5 py-10 md:px-[10vw] md:text-center md:text-base xl:space-y-2;
+    @apply text-center text-sm lg:text-base p-2 text-r-mainwhite/80;
   }
 
   .contactInput {

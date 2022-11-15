@@ -3,7 +3,7 @@ import { sanityClient } from "../sanity";
 import { Post } from "../typings";
 
 const query = groq`
-*[_type == "post"]`
+*[_type == "post"] | order(_createdAt desc)`
 
 export const fetchPosts = async() => {
     const res = await sanityClient.fetch(query);

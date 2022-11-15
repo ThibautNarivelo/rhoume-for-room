@@ -41,6 +41,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             viewport={{ once: true }}
             className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all"
           >
+            {/* ABOUT TAB */}
+
             <motion.a
               whileHover={{ scale: 1.2 }}
               transition={{
@@ -53,6 +55,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             >
               about
             </motion.a>
+
+            {/* PHOTOS TAB */}
+
             <motion.a
               whileHover={{ scale: 1.2 }}
               transition={{
@@ -65,18 +70,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             >
               photos
             </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              transition={{
-                duration: 0.1,
-              }}
-              className="headerEffect"
-              onMouseOver={() => setIsContactPoster(true)}
-              onMouseLeave={() => setIsContactPoster(false)}
-              href="#contactMe"
-            >
-              contact
-            </motion.a>
+
+            {/* FAQ TAB */}
+
             <motion.a
               whileHover={{ scale: 1.2 }}
               transition={{
@@ -89,6 +85,23 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             >
               faq
             </motion.a>
+
+            {/* CONTACT TAB */}
+
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              transition={{
+                duration: 0.1,
+              }}
+              className="headerEffect"
+              onMouseOver={() => setIsContactPoster(true)}
+              onMouseLeave={() => setIsContactPoster(false)}
+              href="#contactMe"
+            >
+              contact
+            </motion.a>
+
+            {/* IG TAB */}
 
             {socials?.map((social) => (
               <motion.div
@@ -111,6 +124,8 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </motion.div>
           <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[60vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
             <Zoom>
+              {/* MAIN POSTER */}
+
               <Image
                 src={urlFor(design.rhoumeMainDesign).url()}
                 alt="Rhoume Design"
@@ -121,6 +136,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 priority
               />
             </Zoom>
+
+            {/* ABOUT POSTER */}
+
             {isAboutPoster && (
               <Image
                 src={urlFor(design.rhoumeAboutDesign).url()}
@@ -131,6 +149,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 quality={90}
               />
             )}
+
+            {/* DESIGN POSTER */}
+
             {isPhotosPoster && (
               <Image
                 src={urlFor(design.rhoumePhotosDesign).url()}
@@ -141,6 +162,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 quality={90}
               />
             )}
+
+            {/* CONTACT POSTER */}
+
             {isContactPoster && (
               <Image
                 src={urlFor(design.rhoumeContactDesign).url()}
@@ -151,6 +175,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 quality={90}
               />
             )}
+
+            {/* FAQ POSTER */}
+
             {isFaqPoster && (
               <Image
                 src={urlFor(design.rhoumeFaqDesign).url()}
@@ -161,6 +188,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
                 quality={90}
               />
             )}
+
+            {/* IG POSTER */}
+
             {isIGPoster && (
               <Image
                 src={urlFor(design.rhoumeIGDesign).url()}
