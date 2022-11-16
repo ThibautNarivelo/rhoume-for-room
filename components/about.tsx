@@ -25,20 +25,48 @@ export const About: FC<Props> = ({ aboutInfos }) => {
           viewport={{ once: true }}
           className="p-10 flex flex-col leading-snug font-['Lora'] text-sm gap-20 md:text-lg lg:text-xl xl:text-2xl xl:gap-28 2xl:text-3xl"
         >
-          <div className="text-start lg:hover:blur-sm transition ease-in-out duration-500">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+            viewport={{ once: true }}
+            className="text-start transition ease-in-out duration-500"
+          >
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
               content={aboutInfo.definition}
             />
-          </div>
-          <div className="text-end lg:hover:blur-sm transition ease-in-out duration-500">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{ once: true }}
+            className="text-end transition ease-in-out duration-500"
+          >
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
               content={aboutInfo.bio}
             />
-          </div>
+          </motion.div>
         </motion.div>
       ))}
     </div>

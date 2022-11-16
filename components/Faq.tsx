@@ -18,133 +18,196 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
           key={pageInfo._id}
           className="w-[90vw] h-screen space-y-2 lg:space-y-5 px-6 py-20 overflow-y-scroll scrollbar-thin scrollbar-thumb-r-mainwhite/20"
         >
-          <Disclosure>
-            {({ open }) => (
-              <>
-                {/* APPOINTMENTS */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.3,
+              stiffness: 10,
+            }}
+            viewport={{ once: true }}
+          >
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  {/* APPOINTMENTS */}
 
-                <Disclosure.Button className="faqTitle">
-                  {pageInfo.appointmentsTitle}
-                </Disclosure.Button>
-                <Disclosure.Panel className="faqBody">
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                    }}
-                  >
-                    <PortableText
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                      content={pageInfo.appointmentsBody}
-                      className="faqBody"
-                    />
-                  </motion.div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
+                  <Disclosure.Button className="faqTitle">
+                    {pageInfo.appointmentsTitle}
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="faqBody">
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0,
+                      }}
+                    >
+                      <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+                        content={pageInfo.appointmentsBody}
+                        className="faqBody"
+                      />
+                    </motion.div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </motion.div>
 
           {/* BOOKINGS */}
-
-          <Disclosure as="div" className="mt-2">
-            {({ open }) => (
-              <>
-                <Disclosure.Button className="faqTitle">
-                  {pageInfo.bookingsTitle}
-                </Disclosure.Button>
-                <Disclosure.Panel className="faqBody">
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                    }}
-                  >
-                    <PortableText
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                      content={pageInfo.bookingsBody}
-                      className="faqBody"
-                    />
-                  </motion.div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{ once: true }}
+          >
+            <Disclosure as="div" className="mt-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="faqTitle">
+                    {pageInfo.bookingsTitle}
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="faqBody">
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        stiffness: 10,
+                      }}
+                    >
+                      <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+                        content={pageInfo.bookingsBody}
+                        className="faqBody"
+                      />
+                    </motion.div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </motion.div>
 
           {/* BEFORE CARE */}
 
-          <Disclosure as="div" className="mt-2">
-            {({ open }) => (
-              <>
-                <Disclosure.Button className="faqTitle">
-                  {pageInfo.beforeCareTitle}
-                </Disclosure.Button>
-                <Disclosure.Panel className="faqBody">
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                    }}
-                  >
-                    <PortableText
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                      content={pageInfo.beforeCareBody}
-                      className="faqBody"
-                    />
-                  </motion.div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{ once: true }}
+          >
+            <Disclosure as="div" className="mt-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="faqTitle">
+                    {pageInfo.beforeCareTitle}
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="faqBody">
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        stiffness: 10,
+                      }}
+                    >
+                      <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+                        content={pageInfo.beforeCareBody}
+                        className="faqBody"
+                      />
+                    </motion.div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </motion.div>
 
           {/* AFTER CARE */}
 
-          <Disclosure as="div" className="mt-2">
-            {({ open }) => (
-              <>
-                <Disclosure.Button className="faqTitle">
-                  {pageInfo.afterCareTitle}
-                </Disclosure.Button>
-                <Disclosure.Panel className="faqBody">
-                  <motion.div
-                    initial={{
-                      opacity: 0,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                    }}
-                  >
-                    <PortableText
-                      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                      content={pageInfo.afterCareBody}
-                      className="faqBody"
-                    />
-                  </motion.div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.9,
+              stiffness: 10,
+            }}
+            viewport={{ once: true }}
+          >
+            <Disclosure as="div" className="mt-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="faqTitle">
+                    {pageInfo.afterCareTitle}
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="faqBody">
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                    >
+                      <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+                        content={pageInfo.afterCareBody}
+                        className="faqBody"
+                      />
+                    </motion.div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </motion.div>
         </div>
       ))}
       <motion.div
