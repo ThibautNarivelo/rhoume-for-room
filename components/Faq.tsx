@@ -220,7 +220,7 @@ export const Faq: FC<Props> = ({ pageInfos, aboutInfos }) => {
         transition={{
           duration: 1,
         }}
-        className="text-r-mainwhite h-[25vw] w-10 p-2 mt-4 flex flex-col items-center justify-center animate-bounce opacity-50 landscape:invisible landscape:md:invisible"
+        className="text-r-mainwhite/50  h-[25vw] w-10 p-2 mt-4 flex flex-col items-center justify-center animate-bounce opacity-50"
       >
         <ArrowlongDown width={30} height={30} />
       </motion.div>

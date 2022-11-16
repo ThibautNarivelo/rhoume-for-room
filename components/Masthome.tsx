@@ -32,16 +32,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             <motion.a
               initial={{
                 opacity: 0,
-                y: 10,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
               transition={{
-                y: { duration: 0.2 },
                 delay: 0,
-                stiffness: 10,
+                type: "spring",
+                stiffness: 20,
               }}
               viewport={{ once: true }}
               className="headerEffect"
@@ -57,16 +55,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             <motion.a
               initial={{
                 opacity: 0,
-                y: 10,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
               transition={{
-                y: { duration: 0.2 },
                 delay: 0.2,
-                stiffness: 10,
+                type: "spring",
+                stiffness: 20,
               }}
               viewport={{ once: true }}
               className="headerEffect"
@@ -82,17 +78,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             <motion.a
               initial={{
                 opacity: 0,
-                y: 10,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
-              whileHover={{ scale: 1.2 }}
               transition={{
-                y: { duration: 0.2 },
                 delay: 0.4,
-                stiffness: 10,
+                type: "spring",
+                stiffness: 20,
               }}
               viewport={{ once: true }}
               className="headerEffect"
@@ -108,16 +101,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
             <motion.a
               initial={{
                 opacity: 0,
-                y: 10,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
               transition={{
-                y: { duration: 0.2 },
                 delay: 0.6,
-                stiffness: 10,
+                type: "spring",
+                stiffness: 20,
               }}
               viewport={{ once: true }}
               className="headerEffect"
@@ -134,16 +125,14 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 10,
                 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
                 }}
                 transition={{
-                  y: { duration: 0.2 },
                   delay: 0.8,
-                  stiffness: 10,
+                  type: "spring",
+                  stiffness: 20,
                 }}
                 viewport={{ once: true }}
                 key={social._id}
@@ -161,7 +150,7 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
           </div>
           <div className="flex justify-center landscape:-space-x-[30vw] portrait:-space-x-[60vw] items-center w-screen h-screen transition-all ease-in-out duration-300">
             <Zoom>
-              {/* MAIN POSTER */}{" "}
+              {/* MAIN POSTER */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
