@@ -54,7 +54,8 @@ body {
 
 .headerEffect {
   @apply  xl:hover:text-r-mainblack xl:hover:bg-r-mainwhite xl:hover:rounded-l-full xl:px-3 xl:hover:py-1
-          xl:ease-in-out xl:duration-300 transition-all
+        2xl:hover:text-r-mainblack 2xl:hover:bg-r-mainwhite 2xl:hover:rounded-l-full 2xl:px-3 2xl:hover:py-1
+          ease-in-out duration-300 transition-all
 }
 
   .aboutHover {
@@ -62,7 +63,7 @@ body {
   }
 
   .faqTitle {
-    @apply flex cursor-pointer w-full items-center justify-center shadow-md px-5 uppercase tracking-[2vw] lg:tracking-[1vw] rounded-full bg-r-mainwhite/90 py-3 lg:py-5 text-center text-sm lg:text-base text-r-mainblack hover:text-r-mainwhite hover:bg-r-mainblack ease-in-out duration-300;
+    @apply flex cursor-pointer w-full items-center justify-center shadow-md px-5 uppercase tracking-[2vw] lg:tracking-[1vw] rounded-full bg-r-mainwhite/90 py-3 lg:py-5 xl:py-5 2xl:py-5 text-center text-sm lg:text-base text-r-mainblack hover:text-r-mainwhite hover:bg-r-mainblack ease-in-out duration-300;
   }
 
   .faqBody {
