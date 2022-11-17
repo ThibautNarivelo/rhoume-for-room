@@ -24,9 +24,9 @@ export const Masthome: FC<MastHomeProps> = ({ designs, socials }) => {
       {designs?.map((design) => (
         <div
           key={design._id}
-          className="h-screen w-screen flex flex-col xl:flex-row items-center justify-center p-28 xl:px-[30vw]"
+          className="h-screen w-screen flex flex-col xl:flex-row 2xl:flex-row items-center justify-center p-28 xl:px-[30vw] 2xl:px-[30vw]"
         >
-          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col gap-4 text-lg text-center xl:text-end text-r-mainwhite transition-all">
+          <div className="lowercase tracking-wide lg:tracking-widest flex flex-row xl:flex-col 2xl:flex-col gap-4 text-lg text-center xl:text-end 2xl:text-end text-r-mainwhite transition-all">
             {/* ABOUT TAB */}
 
             <motion.a
