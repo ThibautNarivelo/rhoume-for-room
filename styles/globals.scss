@@ -43,6 +43,10 @@ body {
                -5px -5px 10px #2a2a2a;
 }
 
+[data-rmiz-modal-overlay="visible"] {
+  background-color: #242424 !important;
+}
+
 @layer components {
   .header {
     @apply cursor-pointer w-full h-full drop-shadow-lg bg-r-mainblack hover:bg-r-mainwhite hover:text-r-mainblack px-[.5vw] text-[12px] transition-all ease-in-out duration-500;
