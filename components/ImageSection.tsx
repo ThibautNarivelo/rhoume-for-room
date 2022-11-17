@@ -39,12 +39,12 @@ export const ImagesSection: FC<Props> = ({ posts }) => {
         {posts.map((post) => (
           <div
             key={post._id}
-            className="carousel-item cursor-pointer portait:w-[80vw] portrait:h-[105vw] landscape:w-[31vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[29vw] portrait:md:w-[61vw] portrait:md:h-[80vw] landscape:lg:w-[30vw] landscape:lg:h-[40vw] portrait:lg:w-[43vw] portait:lg:h-[55vw] xl:w-[31.5vw] xl:h-[40vw] 2xl:w-[31vw] 2xl:h-[40vw]"
+            className="carousel-item cursor-pointer w-[84vw] h-[105vw] landscape:w-[31vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[29vw] portrait:md:w-[61vw] portrait:md:h-[80vw] landscape:lg:w-[30vw] landscape:lg:h-[40vw] portrait:lg:w-[43vw] portait:lg:h-[55vw] xl:w-[31.5vw] xl:h-[40vw] 2xl:w-[31vw] 2xl:h-[40vw]"
           >
             {post.image && (
               <Zoom>
                 <Image
-                  className="rounded-lg portrait:w-[80vw] portrait:h-[105vw] landscape:w-[30vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[28vw] portrait:md:w-[60vw] portrait:md:h-[80vw] portait:lg:w-[42vw] portait:lg:h-[55vw] landscape:lg:w-[29vw] landscape:lg:h-[40vw] xl:w-[29.5vw] xl:h-[40vw] 2xl:w-[30vw] 2xl:h-[40vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
+                  className="rounded-lg w-[82vw] h-[105vw] landscape:w-[30vw] landscape:h-[40vw] landscape:md:h-[39vw] landscape:md:w-[28vw] portrait:md:w-[60vw] portrait:md:h-[80vw] portait:lg:w-[42vw] portait:lg:h-[55vw] landscape:lg:w-[29vw] landscape:lg:h-[40vw] xl:w-[29.5vw] xl:h-[40vw] 2xl:w-[30vw] 2xl:h-[40vw] mx-1 opacity-80 hover:opacity-100 transition-opacity"
                   src={urlFor(post.image).url()!}
                   alt="rhoume's pictures"
                   aria-label="rhoume's pictures"
