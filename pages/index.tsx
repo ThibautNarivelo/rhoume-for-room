@@ -64,7 +64,7 @@ const Home: FC<Props> = ({
             crossOrigin="use-credentials"
             href="manifest.json"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="viewport" content="width=device-width" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
 
