@@ -4,6 +4,7 @@ import { Design, Social } from "../typings";
 import { urlFor } from "../sanity";
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 import ArrowlongDown from "@heroicons/react/24/outline/ArrowLongDownIcon";
 
